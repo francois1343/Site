@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ─────────────────────────────────────────────
-     7. HEADER COMPACT AU SCROLL
+     7. HEADER COMPACT AU SCROLL !
   ───────────────────────────────────────────── */
 
 
