@@ -1,0 +1,1253 @@
+/* ═══════════════════════════════════════════════════════════
+   LA MOUNA — Pizzeria Artisanale
+   style.css
+   Palette : cream / forest green / terracotta
+   Typographie : Cormorant Garamond (serif) + Jost (sans)
+═══════════════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────────
+   1. TOKENS & THÈMES
+───────────────────────────────────────────── */
+:root {
+  /* Couleurs de base */
+  --cream:        #F5F0E8;
+  --cream-deep:   #EDE6D6;
+  --cream-light:  #FAF7F2;
+  --green:        #2C4A35;
+  --green-mid:    #3D6349;
+  --green-light:  #4E7A5C;
+  --green-muted:  #6B9176;
+  --terra:        #C2634F;
+  --terra-light:  #D4806E;
+  --terra-dark:   #A34E3C;
+  --gold:         #B89A6A;
+  --gold-light:   #CDB98A;
+
+  /* Thème clair (défaut) */
+  --bg:           var(--cream);
+  --bg-alt:       var(--cream-deep);
+  --bg-card:      var(--cream-light);
+  --text:         #2A2218;
+  --text-mid:     #5A4E3A;
+  --text-muted:   #8A7D68;
+  --border:       rgba(44, 74, 53, 0.15);
+  --border-mid:   rgba(44, 74, 53, 0.25);
+  --accent:       var(--green);
+  --accent-hover: var(--green-mid);
+  --cta:          var(--terra);
+  --cta-hover:    var(--terra-dark);
+  --botanical-color: var(--green);
+
+  /* Ombres */
+  --shadow-xs: 0 1px 3px rgba(42, 34, 24, 0.06);
+  --shadow-sm: 0 2px 8px rgba(42, 34, 24, 0.08), 0 1px 3px rgba(42, 34, 24, 0.05);
+  --shadow-md: 0 6px 20px rgba(42, 34, 24, 0.10), 0 2px 6px rgba(42, 34, 24, 0.06);
+  --shadow-lg: 0 12px 40px rgba(42, 34, 24, 0.12), 0 4px 12px rgba(42, 34, 24, 0.07);
+  --shadow-inset: inset 0 1px 3px rgba(42, 34, 24, 0.08);
+
+  /* Typographie */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'Jost', system-ui, sans-serif;
+
+  /* Espacements */
+  --section-gap: 7rem;
+  --container:   1160px;
+  --radius:      4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+
+  /* Transitions */
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 0.28s;
+}
+
+/* Thème sombre */
+[data-theme="dark"] {
+  --bg:           #1A2620;
+  --bg-alt:       #142019;
+  --bg-card:      #1F2E25;
+  --text:         #EDE6D6;
+  --text-mid:     #C4B99A;
+  --text-muted:   #8A9E8F;
+  --border:       rgba(237, 230, 214, 0.10);
+  --border-mid:   rgba(237, 230, 214, 0.18);
+  --accent:       var(--gold-light);
+  --accent-hover: var(--gold);
+  --cta:          var(--terra-light);
+  --cta-hover:    var(--terra);
+  --botanical-color: rgba(237, 230, 214, 0.6);
+
+  --shadow-xs: 0 1px 3px rgba(0,0,0,0.25);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.30), 0 1px 3px rgba(0,0,0,0.20);
+  --shadow-md: 0 6px 20px rgba(0,0,0,0.35), 0 2px 6px rgba(0,0,0,0.22);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.40), 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* ─────────────────────────────────────────────
+   2. RESET & BASE
+───────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background-color 0.45s var(--ease), color 0.45s var(--ease);
+  overflow-x: hidden;
+  position: relative;
+}
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+input, textarea, select { font-family: inherit; }
+
+/* ─────────────────────────────────────────────
+   3. TOGGLE THÈME
+───────────────────────────────────────────── */
+.theme-toggle {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.75rem;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.toggle-track {
+  position: relative;
+  width: 58px;
+  height: 28px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-mid);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  box-shadow: var(--shadow-sm);
+  transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+
+.theme-toggle:hover .toggle-track {
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+
+.toggle-icon {
+  font-size: 11px;
+  line-height: 1;
+  color: var(--text-muted);
+  transition: color var(--dur) var(--ease);
+  z-index: 1;
+  user-select: none;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: var(--shadow-xs);
+  transition: transform 0.35s var(--ease-out), background var(--dur) var(--ease);
+}
+
+[data-theme="dark"] .toggle-thumb {
+  transform: translateX(30px);
+}
+
+/* ─────────────────────────────────────────────
+   4. ILLUSTRATIONS BOTANIQUES
+───────────────────────────────────────────── */
+.botanical {
+  position: fixed;
+  width: 180px;
+  height: 180px;
+  pointer-events: none;
+  z-index: 0;
+  color: var(--botanical-color);
+  transition: color 0.45s var(--ease);
+  opacity: 0.7;
+}
+
+.botanical svg { width: 100%; height: 100%; }
+
+.botanical--tl { top: 0;    left: 0;   }
+.botanical--tr { top: 0;    right: 0;  transform: scaleX(-1); }
+.botanical--bl { bottom: 0; left: 0;   transform: scaleY(-1); }
+.botanical--br { bottom: 0; right: 0;  transform: scale(-1);  }
+
+/* ─────────────────────────────────────────────
+   5. HEADER
+───────────────────────────────────────────── */
+.site-header {
+  position: static;
+  z-index: 10;
+  text-align: center;
+  padding: 5rem 2rem 3.5rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+
+/* Ligne décorative supérieure */
+.site-header::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--terra);
+  margin: 0 auto 1.2rem;
+  border-radius: 2px;
+}
+
+.header-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.site-logo {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.3em;
+}
+
+.logo-la {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.6em;
+  letter-spacing: 0.02em;
+}
+
+.logo-mouna {
+  color: var(--accent);
+  transition: color var(--dur) var(--ease);
+  position: relative;
+}
+
+/* Soulignement décoratif sous "Mouna" */
+.logo-mouna::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--terra), transparent);
+}
+
+.header-tagline {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 0;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.site-nav a {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius);
+  transition: color var(--dur) var(--ease), background var(--dur) var(--ease);
+  position: relative;
+}
+
+.site-nav a:not(.nav-cta):hover {
+  color: var(--accent);
+}
+
+/* Séparateur entre liens */
+.site-nav a:not(.nav-cta):not(:last-of-type)::after {
+  content: '·';
+  position: absolute;
+  right: -2px;
+  color: var(--border-mid);
+}
+
+.nav-cta {
+  margin-left: 0.6rem;
+  background: var(--cta);
+  color: var(--cream-light) !important;
+  padding: 0.5rem 1.4rem !important;
+  border-radius: 50px;
+  letter-spacing: 0.15em !important;
+  box-shadow: 0 2px 12px rgba(194, 99, 79, 0.25);
+  transition: background var(--dur) var(--ease), box-shadow var(--dur) var(--ease), transform var(--dur) var(--ease) !important;
+}
+
+.nav-cta:hover {
+  background: var(--cta-hover) !important;
+  box-shadow: 0 4px 18px rgba(194, 99, 79, 0.35) !important;
+  transform: translateY(-1px);
+}
+
+/* ─────────────────────────────────────────────
+   6. MAIN & LAYOUT
+───────────────────────────────────────────── */
+.site-main {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ─────────────────────────────────────────────
+   7. SECTION COMMUNE
+───────────────────────────────────────────── */
+.menu-section {
+  padding: var(--section-gap) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.menu-section:last-of-type {
+  border-bottom: none;
+}
+
+/* En-tête de section */
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-number {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--terra);
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+  padding-top: 0.15em;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.section-subtitle {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+  margin-left: -0.5rem;
+  flex-shrink: 0;
+}
+
+.section-rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border-mid), transparent);
+  margin-left: 0.5rem;
+}
+
+/* ─────────────────────────────────────────────
+   8. GRILLES MENU (entrées, viandes, pâtes…)
+───────────────────────────────────────────── */
+.menu-grid--simple {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0;
+}
+
+.menu-grid--pasta {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--border);
+  transition: background var(--dur) var(--ease);
+  position: relative;
+}
+
+.menu-item:hover {
+  background: var(--bg-alt);
+}
+
+.item-name {
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  font-weight: 400;
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+.item-dots {
+  flex: 1;
+  border-bottom: 1px dotted var(--border-mid);
+  margin-bottom: 4px;
+  min-width: 20px;
+}
+
+.item-price {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+  transition: color var(--dur) var(--ease);
+}
+
+/* ─────────────────────────────────────────────
+   9. SECTION PIZZAS — FEATURED
+───────────────────────────────────────────── */
+.menu-section--featured {
+  background: var(--bg-alt);
+  margin: 0 -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  position: relative;
+}
+
+/* Ligne décorative terracotta en haut */
+.menu-section--featured::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  right: 2rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--terra), transparent);
+  border-radius: 2px;
+}
+
+/* Filtres prix */
+.pizza-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--border-mid);
+  border-radius: 50px;
+  background: var(--bg-card);
+  transition: all var(--dur) var(--ease);
+  box-shadow: var(--shadow-xs);
+}
+
+.filter-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: var(--cream-light);
+  border-color: var(--accent);
+  box-shadow: 0 2px 10px rgba(44, 74, 53, 0.22);
+}
+
+[data-theme="dark"] .filter-btn.active {
+  color: var(--bg);
+}
+
+/* Grille pizzas */
+.pizza-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.pizza-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.4rem 1.5rem;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease),
+    border-color var(--dur) var(--ease),
+    background var(--dur) var(--ease);
+  cursor: default;
+  overflow: hidden;
+}
+
+/* Ligne décorative gauche au survol */
+.pizza-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--terra);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s var(--ease-out);
+  border-radius: 0 0 0 var(--radius-md);
+}
+
+.pizza-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-mid);
+}
+
+.pizza-card:hover::before {
+  transform: scaleY(1);
+}
+
+/* Card signature */
+.pizza-card--signature {
+  border-color: var(--gold);
+  background: linear-gradient(135deg, var(--bg-card) 60%, color-mix(in srgb, var(--gold) 6%, var(--bg-card)));
+  box-shadow: var(--shadow-md), 0 0 0 1px var(--gold);
+}
+
+.pizza-card--signature::before {
+  background: var(--gold);
+}
+
+.pizza-badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 50px;
+  padding: 0.15rem 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.pizza-name {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+  line-height: 1.2;
+}
+
+.pizza-ingredients {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.pizza-price {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  transition: color var(--dur) var(--ease);
+}
+
+/* Carte masquée par filtre */
+.pizza-card.hidden {
+  display: none;
+}
+
+/* ─────────────────────────────────────────────
+   10. BOISSONS
+───────────────────────────────────────────── */
+.boissons-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.boisson-tag {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-mid);
+  padding: 0.55rem 1.5rem;
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-xs);
+  transition:
+    color var(--dur) var(--ease),
+    border-color var(--dur) var(--ease),
+    background var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+  cursor: default;
+}
+
+.boisson-tag:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--bg-alt);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+/* Prix boissons (affiché via subtitle) */
+
+/* ─────────────────────────────────────────────
+   11. FORMULAIRE DE CONTACT
+───────────────────────────────────────────── */
+.contact-section {
+  padding: var(--section-gap) 0 calc(var(--section-gap) + 1rem);
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-info {
+  position: sticky;
+  top: 2rem;
+}
+
+.contact-intro {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.contact-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-label {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--terra);
+}
+
+.detail-value {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--text);
+}
+
+/* Formulaire */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease);
+  position: relative;
+}
+
+/* Ligne décorative terracotta en haut du form */
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 2.5rem;
+  right: 2.5rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--terra), transparent);
+  border-radius: 0 0 2px 2px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+}
+
+.required-star {
+  color: var(--terra);
+  font-style: normal;
+}
+
+.optional-label {
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  text-transform: none;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--bg);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  font-size: 0.92rem;
+  color: var(--text);
+  outline: none;
+  box-shadow: var(--shadow-inset);
+  transition:
+    border-color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease),
+    background var(--dur) var(--ease);
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(44, 74, 53, 0.10), var(--shadow-inset);
+}
+
+[data-theme="dark"] .form-group input:focus,
+[data-theme="dark"] .form-group textarea:focus {
+  box-shadow: 0 0 0 3px rgba(205, 185, 138, 0.12), var(--shadow-inset);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: var(--terra);
+  box-shadow: 0 0 0 3px rgba(194, 99, 79, 0.10);
+}
+
+/* Radio buttons */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.2rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--text-mid);
+  transition: color var(--dur) var(--ease);
+}
+
+.radio-option:hover {
+  color: var(--text);
+}
+
+.radio-option input[type="radio"] {
+  display: none;
+}
+
+.radio-custom {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-mid);
+  background: var(--bg);
+  flex-shrink: 0;
+  position: relative;
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+  box-shadow: var(--shadow-inset);
+}
+
+.radio-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  transition: transform 0.22s var(--ease-out);
+}
+
+.radio-option input[type="radio"]:checked + .radio-custom {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(44, 74, 53, 0.10);
+}
+
+.radio-option input[type="radio"]:checked + .radio-custom::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+[data-theme="dark"] .radio-option input[type="radio"]:checked + .radio-custom {
+  box-shadow: 0 0 0 3px rgba(205, 185, 138, 0.12);
+}
+
+/* Bouton submit */
+.form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--cta);
+  color: var(--cream-light);
+  border-radius: 50px;
+  padding: 1rem 2.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 18px rgba(194, 99, 79, 0.28);
+  transition:
+    background var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+.form-submit:hover {
+  background: var(--cta-hover);
+  box-shadow: 0 6px 24px rgba(194, 99, 79, 0.38);
+  transform: translateY(-2px);
+}
+
+.form-submit:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(194, 99, 79, 0.22);
+}
+
+.form-submit svg {
+  transition: transform var(--dur) var(--ease);
+}
+
+.form-submit:hover svg {
+  transform: translateX(3px);
+}
+
+/* Message succès */
+.form-success {
+  display: none;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--green-mid);
+  background: color-mix(in srgb, var(--green) 8%, var(--bg));
+  border: 1px solid color-mix(in srgb, var(--green) 20%, transparent);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.2rem;
+  animation: fadeIn 0.4s var(--ease-out);
+}
+
+.form-success.visible {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─────────────────────────────────────────────
+   12. FOOTER
+───────────────────────────────────────────── */
+.site-footer {
+  background: var(--green);
+  color: var(--cream);
+  padding: 4rem 2rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Motif décoratif de fond */
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.03);
+  pointer-events: none;
+}
+
+[data-theme="dark"] .site-footer {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border-mid);
+}
+
+.footer-logo {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: var(--cream-light);
+  margin-bottom: 0.35rem;
+}
+
+[data-theme="dark"] .footer-logo {
+  color: var(--gold-light);
+}
+
+.footer-tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: rgba(245,240,232,0.65);
+  margin-bottom: 3rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  text-align: left;
+}
+
+.footer-col h4 {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--terra-light);
+  margin-bottom: 0.9rem;
+}
+
+.footer-col p {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: rgba(245,240,232,0.75);
+  line-height: 1.7;
+}
+
+.footer-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer-hours li {
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  color: rgba(245,240,232,0.75);
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-hours li span {
+  color: rgba(245,240,232,0.5);
+  font-style: italic;
+  min-width: 90px;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: rgba(245,240,232,0.65);
+  transition: color var(--dur) var(--ease);
+}
+
+.footer-socials a:hover {
+  color: var(--cream-light);
+}
+
+.footer-socials svg {
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: opacity var(--dur) var(--ease);
+}
+
+.footer-socials a:hover svg {
+  opacity: 1;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(245,240,232,0.12);
+  padding-top: 1.5rem;
+}
+
+.footer-bottom p {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: rgba(245,240,232,0.38);
+  text-transform: uppercase;
+}
+
+/* ─────────────────────────────────────────────
+   13. ANIMATIONS D'ENTRÉE (scroll)
+───────────────────────────────────────────── */
+.menu-section,
+.contact-section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.65s var(--ease-out),
+    transform 0.65s var(--ease-out);
+}
+
+.menu-section.visible,
+.contact-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─────────────────────────────────────────────
+   14. RESPONSIVE
+───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .contact-info {
+    position: static;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-col:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-gap: 4.5rem;
+  }
+
+  .botanical {
+    width: 120px;
+    height: 120px;
+    opacity: 0.45;
+  }
+
+  .site-header {
+    padding: 4rem 1.5rem 2.5rem;
+  }
+
+  .site-nav {
+    gap: 0.1rem;
+  }
+
+  .site-nav a {
+    font-size: 0.65rem;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .site-nav a:not(.nav-cta)::after {
+    display: none;
+  }
+
+  .site-main {
+    padding: 0 1.25rem;
+  }
+
+  .menu-section--featured {
+    margin: 0 -1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-hours li {
+    justify-content: center;
+  }
+
+  .footer-socials {
+    align-items: center;
+  }
+
+  .pizza-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pizza-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid--simple,
+  .menu-grid--pasta {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    gap: 0.7rem;
+  }
+
+  .theme-toggle {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .botanical {
+    width: 80px;
+    height: 80px;
+    opacity: 0.3;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   15. SCROLLBAR CUSTOM
+───────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-mid);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ─────────────────────────────────────────────
+   16. SÉLECTION TEXTE
+───────────────────────────────────────────── */
+::selection {
+  background: color-mix(in srgb, var(--terra) 25%, transparent);
+  color: var(--text);
+}

@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Mouna — Pizzeria Artisanale</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+ 
+  <!-- ═══════════════════════════════════════════
+       CURSEUR THÈME
+  ═══════════════════════════════════════════ -->
+  <div class="theme-toggle" id="themeToggle" title="Changer de thème">
+    <div class="toggle-track">
+      <span class="toggle-icon light-icon">☀</span>
+      <span class="toggle-icon dark-icon">☽</span>
+      <div class="toggle-thumb"></div>
+    </div>
+  </div>
+ 
+  <!-- ═══════════════════════════════════════════
+       ILLUSTRATIONS BOTANIQUES SVG
+  ═══════════════════════════════════════════ -->
+  <div class="botanical botanical--tl" aria-hidden="true">
+    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.18">
+        <ellipse cx="60" cy="90" rx="28" ry="50" transform="rotate(-30 60 90)" stroke="currentColor" stroke-width="1.2" fill="none"/>
+        <line x1="60" y1="50" x2="60" y2="130" stroke="currentColor" stroke-width="0.8"/>
+        <line x1="60" y1="75" x2="45" y2="65" stroke="currentColor" stroke-width="0.6"/>
+        <line x1="60" y1="90" x2="40" y2="85" stroke="currentColor" stroke-width="0.6"/>
+        <line x1="60" y1="105" x2="48" y2="100" stroke="currentColor" stroke-width="0.6"/>
+        <ellipse cx="110" cy="60" rx="20" ry="38" transform="rotate(15 110 60)" stroke="currentColor" stroke-width="1.2" fill="none"/>
+        <line x1="110" y1="28" x2="110" y2="92" stroke="currentColor" stroke-width="0.8"/>
+        <line x1="110" y1="50" x2="95" y2="44" stroke="currentColor" stroke-width="0.6"/>
+        <line x1="110" y1="65" x2="94" y2="62" stroke="currentColor" stroke-width="0.6"/>
+        <ellipse cx="140" cy="120" rx="14" ry="28" transform="rotate(-10 140 120)" stroke="currentColor" stroke-width="1" fill="none"/>
+        <line x1="140" y1="100" x2="140" y2="148" stroke="currentColor" stroke-width="0.7"/>
+        <circle cx="30" cy="30" r="3" fill="currentColor" opacity="0.5"/>
+        <circle cx="155" cy="40" r="2" fill="currentColor" opacity="0.4"/>
+        <circle cx="90" cy="150" r="2.5" fill="currentColor" opacity="0.35"/>
+      </g>
+    </svg>
+  </div>
+ 
+  <div class="botanical botanical--br" aria-hidden="true">
+    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.18">
+        <ellipse cx="60" cy="100" rx="30" ry="14" stroke="currentColor" stroke-width="1.2" fill="none"/>
+        <path d="M 35 100 Q 30 75 60 68 Q 90 75 85 100" stroke="currentColor" stroke-width="1.2" fill="none"/>
+        <line x1="60" y1="100" x2="60" y2="130" stroke="currentColor" stroke-width="1"/>
+        <line x1="60" y1="110" x2="50" y2="116" stroke="currentColor" stroke-width="0.7"/>
+        <line x1="60" y1="110" x2="70" y2="116" stroke="currentColor" stroke-width="0.7"/>
+        <ellipse cx="115" cy="130" rx="18" ry="8" stroke="currentColor" stroke-width="1" fill="none"/>
+        <path d="M 98 130 Q 95 115 115 111 Q 135 115 132 130" stroke="currentColor" stroke-width="1" fill="none"/>
+        <line x1="115" y1="130" x2="115" y2="148" stroke="currentColor" stroke-width="0.8"/>
+        <ellipse cx="130" cy="55" rx="10" ry="15" transform="rotate(20 130 55)" stroke="currentColor" stroke-width="1" fill="none"/>
+        <ellipse cx="130" cy="55" rx="4" ry="5" transform="rotate(20 130 55)" stroke="currentColor" stroke-width="0.6" fill="none"/>
+        <ellipse cx="155" cy="80" rx="8" ry="12" transform="rotate(-15 155 80)" stroke="currentColor" stroke-width="1" fill="none"/>
+        <ellipse cx="155" cy="80" rx="3" ry="4" transform="rotate(-15 155 80)" stroke="currentColor" stroke-width="0.6" fill="none"/>
+        <circle cx="40" cy="45" r="20" stroke="currentColor" stroke-width="1.2" fill="none"/>
+        <path d="M 40 25 Q 38 15 42 10" stroke="currentColor" stroke-width="0.8" fill="none"/>
+        <path d="M 40 25 Q 30 12 25 10" stroke="currentColor" stroke-width="0.8" fill="none"/>
+        <path d="M 20 40 Q 40 32 60 40" stroke="currentColor" stroke-width="0.6" fill="none"/>
+        <path d="M 21 50 Q 40 42 59 50" stroke="currentColor" stroke-width="0.6" fill="none"/>
+      </g>
+    </svg>
+  </div>
+ 
+  <div class="botanical botanical--tr" aria-hidden="true">
+    <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.16">
+        <ellipse cx="90" cy="100" rx="32" ry="22" transform="rotate(-20 90 100)" stroke="currentColor" stroke-width="1.2" fill="none"/>
+        <path d="M 75 80 Q 90 50 95 30" stroke="currentColor" stroke-width="1" fill="none"/>
+        <path d="M 95 30 Q 85 25 82 18" stroke="currentColor" stroke-width="0.8" fill="none"/>
+        <path d="M 95 30 Q 102 22 105 15" stroke="currentColor" stroke-width="0.8" fill="none"/>
+        <path d="M 30 140 Q 25 120 35 108 Q 45 96 40 80" stroke="currentColor" stroke-width="1" fill="none"/>
+        <path d="M 35 108 Q 20 105 15 98" stroke="currentColor" stroke-width="0.8" fill="none"/>
+        <path d="M 38 118 Q 22 118 16 112" stroke="currentColor" stroke-width="0.8" fill="none"/>
+        <path d="M 37 128 Q 24 130 20 125" stroke="currentColor" stroke-width="0.8" fill="none"/>
+        <circle cx="120" cy="40" r="3" fill="currentColor" opacity="0.4"/>
+        <circle cx="50" cy="50" r="2" fill="currentColor" opacity="0.35"/>
+        <circle cx="140" cy="130" r="2.5" fill="currentColor" opacity="0.3"/>
+      </g>
+    </svg>
+  </div>
+ 
+  <div class="botanical botanical--bl" aria-hidden="true">
+    <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.16">
+        <ellipse cx="70" cy="80" rx="22" ry="28" stroke="currentColor" stroke-width="1.2" fill="none"/>
+        <line x1="70" y1="52" x2="70" y2="40" stroke="currentColor" stroke-width="1"/>
+        <path d="M 70 40 Q 65 30 68 22" stroke="currentColor" stroke-width="0.8" fill="none"/>
+        <ellipse cx="52" cy="75" rx="14" ry="20" transform="rotate(-15 52 75)" stroke="currentColor" stroke-width="1" fill="none"/>
+        <ellipse cx="88" cy="75" rx="14" ry="20" transform="rotate(15 88 75)" stroke="currentColor" stroke-width="1" fill="none"/>
+        <path d="M 52 58 Q 48 50 50 43" stroke="currentColor" stroke-width="0.7" fill="none"/>
+        <path d="M 88 58 Q 92 50 90 43" stroke="currentColor" stroke-width="0.7" fill="none"/>
+        <line x1="20" y1="130" x2="130" y2="20" stroke="currentColor" stroke-width="0.4" stroke-dasharray="3 6"/>
+        <circle cx="130" cy="130" r="4" fill="currentColor" opacity="0.3"/>
+        <circle cx="25" cy="25" r="2.5" fill="currentColor" opacity="0.3"/>
+      </g>
+    </svg>
+  </div>
+ 
+  <!-- ═══════════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-eyebrow">Pizzeria Artisanale — Feu de Bois</div>
+      <h1 class="site-logo">
+        <span class="logo-la">La</span>
+        <span class="logo-mouna">Mouna</span>
+      </h1>
+      <p class="header-tagline"><em>La dolce vita, une pizza à la fois.</em></p>
+    </div>
+    <nav class="site-nav">
+      <a href="#entrees">Entrées</a>
+      <a href="#pizzas">Pizzas</a>
+      <a href="#viandes">Viandes</a>
+      <a href="#plats">Plats préparés</a>
+      <a href="#pates">Pâtes</a>
+      <a href="#boissons">Boissons</a>
+      <a href="#desserts">Desserts</a>
+      <a href="#contact" class="nav-cta">Commander</a>
+    </nav>
+  </header>
+ 
+  <!-- ═══════════════════════════════════════════
+       MAIN
+  ═══════════════════════════════════════════ -->
+  <main class="site-main">
+ 
+    <!-- ─── ENTRÉES ─────────────────────────── -->
+    <section class="menu-section" id="entrees">
+      <div class="section-header">
+        <div class="section-number">01</div>
+        <h2 class="section-title">Les Entrées</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="menu-grid menu-grid--simple">
+        <div class="menu-item">
+          <span class="item-name">Scampi à l'ail</span>
+          <span class="item-dots"></span>
+          <span class="item-price">8,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Scampi Diavola</span>
+          <span class="item-dots"></span>
+          <span class="item-price">8,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Croquettes de Mozzarella</span>
+          <span class="item-dots"></span>
+          <span class="item-price">8,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Scampi Gorgonzola</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,00 €</span>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ─── PIZZAS ──────────────────────────── -->
+    <section class="menu-section menu-section--featured" id="pizzas">
+      <div class="section-header">
+        <div class="section-number">02</div>
+        <h2 class="section-title">Les Pizzas</h2>
+        <div class="section-rule"></div>
+      </div>
+ 
+      <div class="pizza-filters">
+        <button class="filter-btn active" data-filter="all">Toutes</button>
+        <button class="filter-btn" data-filter="9">9 €</button>
+        <button class="filter-btn" data-filter="10">10 €</button>
+        <button class="filter-btn" data-filter="11">11 €</button>
+        <button class="filter-btn" data-filter="12">12–13 €</button>
+        <button class="filter-btn" data-filter="14">14–15 €</button>
+        <button class="filter-btn" data-filter="16">16 € +</button>
+      </div>
+ 
+      <div class="pizza-grid" id="pizzaGrid">
+ 
+        <div class="pizza-card" data-price="9">
+          <div class="pizza-name">Margarita</div>
+          <div class="pizza-ingredients">Tomate, mozzarella</div>
+          <div class="pizza-price">9,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="10">
+          <div class="pizza-name">Prochoto</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, jambon</div>
+          <div class="pizza-price">10,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="10">
+          <div class="pizza-name">Bianca</div>
+          <div class="pizza-ingredients">Tomate fraîche, mozzarella, roquette, ail</div>
+          <div class="pizza-price">10,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="10">
+          <div class="pizza-name">Rimini</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, jambon, champignon</div>
+          <div class="pizza-price">10,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="10">
+          <div class="pizza-name">Piemontaise</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, jambon, oignon</div>
+          <div class="pizza-price">10,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="10">
+          <div class="pizza-name">Veniziana</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, champignon</div>
+          <div class="pizza-price">10,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="10">
+          <div class="pizza-name">Napolitaine</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, olives, câpres, anchois</div>
+          <div class="pizza-price">10,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="11">
+          <div class="pizza-name">Diavolo</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, jambon, anchois</div>
+          <div class="pizza-price">11,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="10">
+          <div class="pizza-name">Salami</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, salami piquant</div>
+          <div class="pizza-price">10,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="11">
+          <div class="pizza-name">Thon</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, thon, oignons</div>
+          <div class="pizza-price">11,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="11">
+          <div class="pizza-name">4 Saisons</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, jambon, artichauts, champignons, olives</div>
+          <div class="pizza-price">11,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="11">
+          <div class="pizza-name">Sicilienne</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, poivrons, olives, câpres, anchois</div>
+          <div class="pizza-price">11,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="11">
+          <div class="pizza-name">Végétarienne</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, artichauts, olives, champignons, poivrons</div>
+          <div class="pizza-price">11,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="11">
+          <div class="pizza-name">Hawai</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, jambon, ananas</div>
+          <div class="pizza-price">11,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="11">
+          <div class="pizza-name">Lardière</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, lardons, oignons</div>
+          <div class="pizza-price">11,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="11">
+          <div class="pizza-name">4 Fromages</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, taleggio, parmesan, gorgonzola</div>
+          <div class="pizza-price">11,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="11">
+          <div class="pizza-name">Merguez</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, merguez, oignons</div>
+          <div class="pizza-price">11,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="11">
+          <div class="pizza-name">Parmigiann</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, aubergines, parmesan</div>
+          <div class="pizza-price">11,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="11">
+          <div class="pizza-name">Capresse</div>
+          <div class="pizza-ingredients">Tomate fraîche, mozzarella, olives, roquette, huile d'olive</div>
+          <div class="pizza-price">11,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="11">
+          <div class="pizza-name">Calzone</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, jambon, salami, champignon</div>
+          <div class="pizza-price">11,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">Bolognaise</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, bolognaise, parmesan, jambon</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="12">
+          <div class="pizza-name">Chop</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, tomates fraîches, haché de bœuf, poivron, sauce barbecue</div>
+          <div class="pizza-price">12,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">Marinara</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, fruit de mer, huile à l'ail</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">Chèvre</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, chèvre, lardon</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">Carpaccio</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, carpaccio, parmesan, roquette, ail</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">Scampi</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, scampi, tomate fraîche, huile à l'ail</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">Saumon</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, saumon, oignons</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="14">
+          <div class="pizza-name">Chef</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, merguez, bœuf haché, salami</div>
+          <div class="pizza-price">14,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">Feta</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, bœuf haché, feta, poivron</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">5 Fromages</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, taleggio, gorgonzola, chèvre</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">Recola</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, tomate fraîche, aubergine, roquette, ail, parmesan</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">Mexicaine</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, salami, merguez, poivrons</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">Calabrese</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, jambon, aubergines, parmesan</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">Burger</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, hamburger, oignons, poivrons, sauce barbecue</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">Maison</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, aubergine, scampis</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">Gyros</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, poulet mariné</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">Mami</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, aubergine, salami, œuf, parmesan</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">Spéciale</div>
+          <div class="pizza-ingredients">Crème, mozzarella, feta, poulet, lardons</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">Ritta</div>
+          <div class="pizza-ingredients">Crème, mozzarella, tomate fraîche, aubergines, parmesan</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="14">
+          <div class="pizza-name">Savoyarde</div>
+          <div class="pizza-ingredients">Base crème, lardon, pomme de terre, fromage raclette</div>
+          <div class="pizza-price">14,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="14">
+          <div class="pizza-name">Barbecue</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, viande hachée, merguez, sauce barbecue</div>
+          <div class="pizza-price">14,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="14">
+          <div class="pizza-name">6 Fromages</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, gorgonzola, taleggio, parmesan, chèvre, raclette</div>
+          <div class="pizza-price">14,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="14">
+          <div class="pizza-name">Pita</div>
+          <div class="pizza-ingredients">Crème, mozzarella, oignons, viande pita, sauce pita, feta</div>
+          <div class="pizza-price">14,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="14">
+          <div class="pizza-name">Océane</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, scampi, fruit de mer, anchois, ail</div>
+          <div class="pizza-price">14,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="14">
+          <div class="pizza-name">Raclette</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, pomme de terre, salami, fromage à raclette</div>
+          <div class="pizza-price">14,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="14">
+          <div class="pizza-name">Royale</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, merguez, bœuf haché, salami, jambon</div>
+          <div class="pizza-price">14,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="14">
+          <div class="pizza-name">Parme</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, champignons, jambon de parme, roquette, parmesan, huile à l'ail</div>
+          <div class="pizza-price">14,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="15">
+          <div class="pizza-name">Roi Soleil</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, saumon, tomate fraîche, chèvre, parmesan, huile à l'ail</div>
+          <div class="pizza-price">15,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="15">
+          <div class="pizza-name">Felece</div>
+          <div class="pizza-ingredients">Base crème, scampi, saumon, tomate fraîche, gorgonzola</div>
+          <div class="pizza-price">15,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="16">
+          <div class="pizza-name">Cannibale</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, jambon, salami, lardons, merguez, haché de bœuf</div>
+          <div class="pizza-price">16,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="17">
+          <div class="pizza-name">Burrata</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, tomate fraîche, parme, viande de haché, burrata, roquette, parmesan, ail</div>
+          <div class="pizza-price">17,00 €</div>
+        </div>
+ 
+        <div class="pizza-card pizza-card--signature" data-price="20">
+          <div class="pizza-badge">Signature</div>
+          <div class="pizza-name">Jadot</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, salami, parme, merguez, gorgonzola, haché, lardons, burrata, roquette, ail</div>
+          <div class="pizza-price">20,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="14">
+          <div class="pizza-name">Rim</div>
+          <div class="pizza-ingredients">Tomate, mozzarella, salami, parme, merguez, gorgonzola</div>
+          <div class="pizza-price">14,00 €</div>
+        </div>
+ 
+        <div class="pizza-card" data-price="13">
+          <div class="pizza-name">Choupette</div>
+          <div class="pizza-ingredients">Mozzarella, tomate fraîche, thon, roquette, crème balsamique</div>
+          <div class="pizza-price">13,00 €</div>
+        </div>
+ 
+      </div>
+    </section>
+ 
+    <!-- ─── VIANDES ─────────────────────────── -->
+    <section class="menu-section" id="viandes">
+      <div class="section-header">
+        <div class="section-number">03</div>
+        <h2 class="section-title">Les Viandes</h2>
+        <p class="section-subtitle">Escalopes</p>
+        <div class="section-rule"></div>
+      </div>
+      <div class="menu-grid menu-grid--simple">
+        <div class="menu-item">
+          <span class="item-name">Escalope Milanaise</span>
+          <span class="item-dots"></span>
+          <span class="item-price">15,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Escalope Archiduc</span>
+          <span class="item-dots"></span>
+          <span class="item-price">15,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Escalope Bolognaise</span>
+          <span class="item-dots"></span>
+          <span class="item-price">16,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Escalope Parmigianna</span>
+          <span class="item-dots"></span>
+          <span class="item-price">16,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Escalope Parme</span>
+          <span class="item-dots"></span>
+          <span class="item-price">16,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Escalope 4 Fromages</span>
+          <span class="item-dots"></span>
+          <span class="item-price">16,00 €</span>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ─── PLATS PRÉPARÉS ──────────────────── -->
+    <section class="menu-section" id="plats">
+      <div class="section-header">
+        <div class="section-number">04</div>
+        <h2 class="section-title">Plats Préparés</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="menu-grid menu-grid--simple">
+        <div class="menu-item">
+          <span class="item-name">Cannelloni à la Viande</span>
+          <span class="item-dots"></span>
+          <span class="item-price">11,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Lasagne Bolognaise</span>
+          <span class="item-dots"></span>
+          <span class="item-price">11,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Ravioli Ricotta Épinards</span>
+          <span class="item-dots"></span>
+          <span class="item-price">11,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Trio de Pâtes</span>
+          <span class="item-dots"></span>
+          <span class="item-price">13,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Festival de Pâtes</span>
+          <span class="item-dots"></span>
+          <span class="item-price">15,00 €</span>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ─── PÂTES ────────────────────────────── -->
+    <section class="menu-section" id="pates">
+      <div class="section-header">
+        <div class="section-number">05</div>
+        <h2 class="section-title">Les Pâtes</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="menu-grid menu-grid--pasta">
+        <div class="menu-item">
+          <span class="item-name">Napoli</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Arrabiata</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">À l'ail</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Thon</span>
+          <span class="item-dots"></span>
+          <span class="item-price">9,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Casa</span>
+          <span class="item-dots"></span>
+          <span class="item-price">10,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Jambon Crème</span>
+          <span class="item-dots"></span>
+          <span class="item-price">10,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Carbonara</span>
+          <span class="item-dots"></span>
+          <span class="item-price">10,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Tortellini Jambon Crème</span>
+          <span class="item-dots"></span>
+          <span class="item-price">11,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Bolognaise</span>
+          <span class="item-dots"></span>
+          <span class="item-price">10,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Molisana</span>
+          <span class="item-dots"></span>
+          <span class="item-price">11,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">4 Fromages</span>
+          <span class="item-dots"></span>
+          <span class="item-price">11,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Fruits de Mer</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Chicken</span>
+          <span class="item-dots"></span>
+          <span class="item-price">11,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Saumon</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Scampi</span>
+          <span class="item-dots"></span>
+          <span class="item-price">12,00 €</span>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ─── BOISSONS ─────────────────────────── -->
+    <section class="menu-section" id="boissons">
+      <div class="section-header">
+        <div class="section-number">06</div>
+        <h2 class="section-title">Les Boissons</h2>
+        <p class="section-subtitle">Toutes à 2,00 €</p>
+        <div class="section-rule"></div>
+      </div>
+      <div class="boissons-list">
+        <span class="boisson-tag">Fanta</span>
+        <span class="boisson-tag">Coca-Cola</span>
+        <span class="boisson-tag">Ice Tea</span>
+        <span class="boisson-tag">Sprite</span>
+        <span class="boisson-tag">Tropico</span>
+      </div>
+    </section>
+ 
+    <!-- ─── DESSERTS ─────────────────────────── -->
+    <section class="menu-section" id="desserts">
+      <div class="section-header">
+        <div class="section-number">07</div>
+        <h2 class="section-title">Les Desserts</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="menu-grid menu-grid--simple">
+        <div class="menu-item">
+          <span class="item-name">Moelleux au Chocolat</span>
+          <span class="item-dots"></span>
+          <span class="item-price">4,50 €</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Tiramisu</span>
+          <span class="item-dots"></span>
+          <span class="item-price">4,50 €</span>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ─── FORMULAIRE CONTACT / COMMANDE ────── -->
+    <section class="contact-section" id="contact">
+      <div class="section-header">
+        <div class="section-number">08</div>
+        <h2 class="section-title">Passer Commande</h2>
+        <div class="section-rule"></div>
+      </div>
+ 
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <p class="contact-intro">Complétez le formulaire ci-dessous pour réserver ou commander. Nous vous confirmerons par téléphone.</p>
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <span class="detail-label">Téléphone</span>
+              <span class="detail-value">071 32 78 74</span>
+            </div>
+            <div class="contact-detail-item">
+              <span class="detail-label">Mobile</span>
+              <span class="detail-value">0484 20 20 42</span>
+            </div>
+            <div class="contact-detail-item">
+              <span class="detail-label">Mardi</span>
+              <span class="detail-value">17h30 – 22h00</span>
+            </div>
+            <div class="contact-detail-item">
+              <span class="detail-label">Mer. &amp; Jeu.</span>
+              <span class="detail-value">17h30 – 22h30</span>
+            </div>
+            <div class="contact-detail-item">
+              <span class="detail-label">Ven. Sam. Dim.</span>
+              <span class="detail-value">11h30–14h &amp; 17h30–22h30</span>
+            </div>
+          </div>
+        </div>
+ 
+        <form class="contact-form" id="contactForm" novalidate>
+ 
+          <div class="form-row">
+            <div class="form-group">
+              <label for="prenom">Prénom <span class="required-star">*</span></label>
+              <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required />
+            </div>
+            <div class="form-group">
+              <label for="nom">Nom <span class="required-star">*</span></label>
+              <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+            </div>
+          </div>
+ 
+          <div class="form-group">
+            <label for="telephone">Numéro de téléphone <span class="required-star">*</span></label>
+            <input type="tel" id="telephone" name="telephone" placeholder="0XXX XX XX XX" required />
+          </div>
+ 
+          <div class="form-group">
+            <label for="commande">Votre commande complète <span class="required-star">*</span></label>
+            <textarea id="commande" name="commande" rows="5" placeholder="Détaillez votre commande (pizzas, plats, boissons, desserts…)" required></textarea>
+          </div>
+ 
+          <div class="form-row">
+            <div class="form-group">
+              <label>Type de service <span class="required-star">*</span></label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="service" value="surplace" required />
+                  <span class="radio-custom"></span>
+                  Sur place
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="service" value="emporter" />
+                  <span class="radio-custom"></span>
+                  À emporter
+                </label>
+              </div>
+            </div>
+ 
+            <div class="form-group">
+              <label>Paiement <span class="required-star">*</span></label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="paiement" value="especes" required />
+                  <span class="radio-custom"></span>
+                  Espèces
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="paiement" value="payconiq" />
+                  <span class="radio-custom"></span>
+                  QR Payconiq
+                </label>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Date souhaitée <span class="required-star">*</span></label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div class="form-group">
+              <label for="heure">Heure souhaitée <span class="required-star">*</span></label>
+              <input type="time" id="heure" name="heure" required />
+            </div>
+          </div>
+ 
+          <div class="form-group">
+            <label for="notes">Notes <span class="optional-label">(facultatif)</span></label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Allergies, demandes particulières…"></textarea>
+          </div>
+ 
+          <button type="submit" class="form-submit">
+            <span>Envoyer ma commande</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+ 
+          <div class="form-success" id="formSuccess" aria-live="polite">
+            <span>✓</span> Merci ! Votre commande a bien été reçue. Nous vous contactons rapidement pour confirmer.
+          </div>
+ 
+        </form>
+      </div>
+    </section>
+ 
+  </main>
+ 
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-logo">Mouna Lisa</div>
+    <p class="footer-tagline">Pizzas artisanales cuites au feu de bois</p>
+ 
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Livraison &amp; À emporter</h4>
+        <p>Thuin, Cousolre, Thuillies, Gozée,<br>Philippeville, Walcourt</p>
+      </div>
+      <div class="footer-col">
+        <h4>Horaires</h4>
+        <ul class="footer-hours">
+          <li><span>Mar.</span> 17h30 – 22h00</li>
+          <li><span>Mer. &amp; Jeu.</span> 17h30 – 22h30</li>
+          <li><span>Ven., Sam., Dim.</span> 11h30–14h &amp; 17h30–22h30</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>071 32 78 74<br>0484 20 20 42</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/Lamouna137" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+            @Lamouna137
+          </a>
+          <a href="https://www.facebook.com/PizzeriaLaMouna" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+            Pizzeria La Mouna
+          </a>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="footer-bottom">
+      <p>© 2026 Mouna Lisa. Tous droits réservés.</p>
+    </div>
+  </footer>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
