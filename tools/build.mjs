@@ -9,7 +9,7 @@ const files = [
   'manifest.webmanifest','images/mark.svg',
   ...['favicon.ico','favicon-16x16.png','favicon-32x32.png','apple-touch-icon.png',
     'pwa-192x192.png','pwa-512x512.png','maskable-192x192.png','maskable-512x512.png'].map(n=>'icons/'+n),
-  ...['margarita','prochoto','hawai','4-fromages','jadot'].flatMap(n=>[640,1280].map(s=>'images/'+n+'-'+s+'.webp'))
+  ...['margarita','prochoto','hawai','4-fromages','jadot','bianca','rimini'].flatMap(n=>[640,1280].map(s=>'images/'+n+'-'+s+'.webp'))
 ];
 for (const f of [...files, 'sw.js']) {
   const file=path.join(root,f);

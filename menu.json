@@ -92,7 +92,8 @@
       "name": "Bianca",
       "category": "pizzas",
       "price": 1000,
-      "ingredients": "Tomate fraîche, mozzarella, roquette, ail"
+      "ingredients": "Tomate fraîche, mozzarella, roquette, ail",
+      "image": "bianca"
     },
     {
       "id": "pizzas/Rimini|1000",
@@ -100,7 +101,8 @@
       "name": "Rimini",
       "category": "pizzas",
       "price": 1000,
-      "ingredients": "Tomate, mozzarella, jambon, champignon"
+      "ingredients": "Tomate, mozzarella, jambon, champignon",
+      "image": "rimini"
     },
     {
       "id": "pizzas/Piemontaise|1000",

@@ -2,7 +2,7 @@
 
 Production : **https://lamouna.vercel.app/** · dépôt `francois1343/Site`, branche `main`.
 
-La version du 3 novembre 2026 reprend la carte publiée : **54 pizzas, 91 références au total, sept catégories**. Les cinq illustrations fournies (Margarita, Prochoto, Hawai, 4 Fromages et Jadot) accompagnent les recettes correspondantes. Les autres fiches affichent leurs ingrédients sans inventer une image du plat. Le clair/sombre conserve la préférence existante.
+La version du 3 novembre 2026 reprend la carte publiée : **54 pizzas, 91 références au total, sept catégories**. Les sept illustrations (Margarita, Prochoto, Hawai, 4 Fromages et Jadot fournies initialement, puis Bianca et Rimini générées) accompagnent les recettes correspondantes. Les autres fiches affichent leurs ingrédients sans inventer une image du plat. Le clair/sombre conserve la préférence existante.
 
 ## Parcours client
 
@@ -35,6 +35,10 @@ Les tests couvrent fiches, ajout, quantités, persistance, copie, catégories, r
 
 ## Version visuelle et PWA
 
-Galerie des cinq pizzas, miniatures interactives, filtre En images, catégories illustrées et navigation basse téléphone/tablette. Identité crème/vert/terre cuite inspirée des compositions de Jule, avec les illustrations existantes.
+Galerie des sept pizzas, miniatures interactives, filtre En images, catégories illustrées et navigation basse téléphone/tablette. Identité crème/vert/terre cuite inspirée des compositions de Jule, avec les illustrations existantes.
 
 Installation discrète, icônes complètes, carte hors ligne après précache, indication de connexion et mises à jour par « J’ai compris ». Panier conservé ; brouillon privé à l’onglet. Aucun paiement, envoi de commande ou Web Push activé. Les 13 volets du prompt et leurs limites sont détaillés dans [docs/PWA.md](docs/PWA.md).
+
+### Bianca et Rimini
+
+Deux illustrations générées ajoutées aux bonnes recettes, à la galerie, au filtre En images et au cache PWA. Exports WebP 640/1280 px, qualité 92, sans recadrage ; originaux conservés séparément. Les prix et ingrédients restent inchangés. La galerie défile horizontalement lorsque sept miniatures ne tiennent pas sur le petit écran.

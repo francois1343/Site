@@ -1,5 +1,5 @@
 {
-  "kind": "User-provided Nano Banana illustrations; full frame retained, including existing mark. Technical resizing/encoding only.",
+  "kind": "Five original user-provided Nano Banana illustrations and two generated Bianca/Rimini illustrations. Full frames retained; technical resizing/encoding only.",
   "checkedAt": "2026-11-03",
   "files": [
     {
@@ -81,6 +81,42 @@
       "height": 698,
       "source": "jadot.png",
       "sourceSha256": "2278455ad5e775f5f7c95873ce62a50f7ddb42569a0fd590be87ee863f6998e9"
+    },
+    {
+      "file": "bianca-640.webp",
+      "bytes": 99188,
+      "width": 640,
+      "height": 349,
+      "source": "exec-2cfc9da4-1b95-4529-9c9d-240ad41f0708.png",
+      "sourceSha256": "cf07d291eab08636cc162853270bce5183e8d71853fe6148b58f6b0e7a697218",
+      "kind": "Generated menu illustration; recipe from menu.json; not an actual restaurant photograph."
+    },
+    {
+      "file": "bianca-1280.webp",
+      "bytes": 292394,
+      "width": 1280,
+      "height": 698,
+      "source": "exec-2cfc9da4-1b95-4529-9c9d-240ad41f0708.png",
+      "sourceSha256": "cf07d291eab08636cc162853270bce5183e8d71853fe6148b58f6b0e7a697218",
+      "kind": "Generated menu illustration; recipe from menu.json; not an actual restaurant photograph."
+    },
+    {
+      "file": "rimini-640.webp",
+      "bytes": 99268,
+      "width": 640,
+      "height": 349,
+      "source": "exec-f9e06845-6124-4590-a137-4f71ad31909b.png",
+      "sourceSha256": "206846c78e135d9a769026bbf77a095a2544157af6711ea34ad08f85e544a231",
+      "kind": "Generated menu illustration; recipe from menu.json; not an actual restaurant photograph."
+    },
+    {
+      "file": "rimini-1280.webp",
+      "bytes": 297270,
+      "width": 1280,
+      "height": 698,
+      "source": "exec-f9e06845-6124-4590-a137-4f71ad31909b.png",
+      "sourceSha256": "206846c78e135d9a769026bbf77a095a2544157af6711ea34ad08f85e544a231",
+      "kind": "Generated menu illustration; recipe from menu.json; not an actual restaurant photograph."
     }
   ]
 }
