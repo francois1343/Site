@@ -23,12 +23,18 @@ Le terminal cuisine développé séparément dans le Cerveau/La Mouna n'est pas 
 
 Les PNG d'origine sont restés sur le PC. Les exports WebP conservent le cadre entier et la marque existante : 640 et 1280 px, `srcset`, dimensions explicites et chargement différé des cartes. Les dix exports totalisent environ 1,08 Mo. `images/provenance.json` conserve les noms et empreintes des fichiers fournis ; il n'est pas publié par le build. Il ne constitue pas une preuve de licence des illustrations.
 
-Le panier utilise `localStorage` sur l'origine du site. Aucun compte, donnée bancaire, traqueur ou synchronisation du panier avec un autre appareil n'est ajouté. Les polices Google Fonts étaient déjà utilisées ; les familles de repli restent disponibles.
+Le panier utilise `localStorage` sur l'origine du site. Aucun compte, donnée bancaire, traqueur ou synchronisation du panier avec un autre appareil n'est ajouté. Les polices système évitent les requêtes Google Fonts et restent disponibles hors ligne.
 
 ## Développement et publication
 
-Node 24 : `npm ci --ignore-scripts`, `npm test`, `npm run build`. Les dépendances sont uniquement destinées aux tests ; le navigateur utilise HTML/CSS/JS sans framework. Pour un aperçu local : `python -m http.server 8898 --directory dist`.
+Node 24 : `npm ci --ignore-scripts`, `npm run build`, `npm test`. Les dépendances sont uniquement destinées aux tests ; le navigateur utilise HTML/CSS/JS sans framework. Pour un aperçu local : `python -m http.server 8898 --directory dist`.
 
 Vercel construit `dist` selon `vercel.json`. La liste du build contient seulement l'interface, la carte et les images. Ni tests, outils, anciens HTML de démonstration, fichier du coffre, base ou secret ne sont publiés. Les anciens liens `#pizzas`, `#entrees`, `#pates`, etc. restent reconnus.
 
 Les tests couvrent fiches, ajout, quantités, persistance, copie, catégories, recherche, clair/sombre, migration, quota, données invalides et conflits. Les règles de disposition ciblent petits téléphones, tablettes et desktop avec zones sûres, images adaptatives, boutons tactiles et mouvement réduit. **Le navigateur pilotable étant indisponible dans cette séance, aucune capture ni recette visuelle physique Android/iOS n'est annoncée.** Vérifier ces appareils avant d'engager le site comme service de commande opérationnel.
+
+## Version visuelle et PWA
+
+Galerie des cinq pizzas, miniatures interactives, filtre En images, catégories illustrées et navigation basse téléphone/tablette. Identité crème/vert/terre cuite inspirée des compositions de Jule, avec les illustrations existantes.
+
+Installation discrète, icônes complètes, carte hors ligne après précache, indication de connexion et mises à jour par « J’ai compris ». Panier conservé ; brouillon privé à l’onglet. Aucun paiement, envoi de commande ou Web Push activé. Les 13 volets du prompt et leurs limites sont détaillés dans [docs/PWA.md](docs/PWA.md).

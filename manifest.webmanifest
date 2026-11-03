@@ -1,0 +1,14 @@
+{
+  "id": "./", "name": "La Mouna · Pizzeria", "short_name": "La Mouna",
+  "description": "La carte de La Mouna à Beaumont. Préparez votre panier puis appelez la pizzeria pour confirmer.",
+  "lang": "fr-BE", "dir": "ltr", "start_url": "./", "scope": "./",
+  "display": "standalone", "background_color": "#f4f0e5", "theme_color": "#214e38",
+  "categories": ["food", "shopping"],
+  "icons": [
+    {"src":"icons/pwa-192x192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"icons/pwa-512x512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"icons/maskable-192x192.png","sizes":"192x192","type":"image/png","purpose":"maskable"},
+    {"src":"icons/maskable-512x512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ],
+  "shortcuts": [{"name":"La carte","url":"./#carte"},{"name":"Infos pratiques","url":"./#infos"}]
+}
