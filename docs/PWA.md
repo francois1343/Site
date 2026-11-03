@@ -50,4 +50,10 @@ Pour revenir en arrière, rétablir le code voulu avec un nouveau commit, recons
 
 ## Recette de publication
 
-À compléter après contrôle du rendu publié. Les essais automatisés ne constituent pas un test matériel de la tablette de François.
+- Production existante consultée dans Chrome distant avant modification ; elle reste sur le commit `4eee51b`.
+- Proposition sauvegardée dans la branche `codex/lamouna-visuel-pwa`, PR brouillon https://github.com/francois1343/Site/pull/1.
+- Vercel confirme le déploiement de prévisualisation du commit `cc1548b7b5c349cadb585372c2365898b8be7c02` (statut success).
+- Aperçu : https://lamouna-git-codex-lamouna-visuel-pwa-francois1343s-projects.vercel.app ; l'ouverture dans Chrome distant redirige vers la connexion Vercel. Aucun contournement ni désactivation de cette protection.
+- La prévisualisation locale est inaccessible depuis ce navigateur distant (connexion refusée sur 127.0.0.1:8898).
+- La publication sur main a été bloquée par la vérification automatique d'autorisation. Elle attend un accord explicite du propriétaire ; aucune fusion effectuée.
+- Le nouveau rendu, l'installation réelle, l'offline réel et le cycle N → N+1 dans Chrome ne sont donc pas déclarés validés. Les 17 tests réussis sont des tests Node/jsdom/VM, pas une recette graphique ou matérielle de tablette.
