@@ -48,7 +48,7 @@ L'[Office du tourisme de Beaumont](https://www.tourismebeaumont.be/Restaurants) 
 
 Pour revenir en arrière, rétablir le code voulu avec un nouveau commit, reconstruire et publier. Les versions PWA déjà installées recevront ce retour comme une nouvelle version, après leur accord. Revenir à un déploiement antérieur à la PWA ne supprime pas automatiquement les SW installés : garder le mécanisme de mise à jour ou prévoir un SW de retrait dédié ; ne pas demander aux clients de vider leurs paniers.
 
-## Recette de publication
+## Recette de publication — complétée après autorisation
 
 - Production existante consultée dans Chrome distant avant modification ; elle reste sur le commit `4eee51b`.
 - Proposition sauvegardée dans la branche `codex/lamouna-visuel-pwa`, PR brouillon https://github.com/francois1343/Site/pull/1.
@@ -57,3 +57,12 @@ Pour revenir en arrière, rétablir le code voulu avec un nouveau commit, recons
 - La prévisualisation locale est inaccessible depuis ce navigateur distant (connexion refusée sur 127.0.0.1:8898).
 - La publication sur main a été bloquée par la vérification automatique d'autorisation. Elle attend un accord explicite du propriétaire ; aucune fusion effectuée.
 - Le nouveau rendu, l'installation réelle, l'offline réel et le cycle N → N+1 dans Chrome ne sont donc pas déclarés validés. Les 17 tests réussis sont des tests Node/jsdom/VM, pas une recette graphique ou matérielle de tablette.
+
+
+### Publication autorisée et vérifiée
+
+Le propriétaire a explicitement autorisé la publication (« Oui publie »). La PR #1 est fusionnée sur main, commit `bda8216d2b76a55bf167e5fefba74586da5782b9` ; statut Vercel success. Le build public sur https://lamouna.vercel.app/ expose la version `7ce0a04134a26e76`, identique au build testé.
+
+Contrôles effectués dans Chrome distant sur la version publique : affichage de la nouvelle composition et des cinq miniatures ; carte chargée (54 pizzas) ; sélection Jadot et ouverture de sa fiche ; ajout au panier confirmé à 20,00 € ; filtre En images (5 articles), retour à 54 articles. L'article de test a été retiré. Aucune erreur propre au site observée dans les journaux consultés (un message d'extension de navigateur est sans rapport avec le site).
+
+Ces contrôles lèvent la limite de prévisualisation décrite plus haut pour le rendu desktop et ces interactions. L'installation physique sur tablette/Android/iOS, le hors-ligne réel et N → N+1 en navigateur restent non validés. La production est désormais mise à jour ; les mentions de blocage ci-dessus décrivent l'étape précédente.
