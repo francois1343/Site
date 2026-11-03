@@ -1,0 +1,16 @@
+{
+  "name": "lamouna-storefront",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "test": "node --experimental-vm-modules --test tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}

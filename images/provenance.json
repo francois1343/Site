@@ -1,0 +1,86 @@
+{
+  "kind": "User-provided Nano Banana illustrations; full frame retained, including existing mark. Technical resizing/encoding only.",
+  "checkedAt": "2026-11-03",
+  "files": [
+    {
+      "file": "margarita-640.webp",
+      "bytes": 61568,
+      "width": 640,
+      "height": 349,
+      "source": "margha.png",
+      "sourceSha256": "37088165b0bd331485fd35717e625382846311cfda7f4904499c56a6ee24c3c1"
+    },
+    {
+      "file": "margarita-1280.webp",
+      "bytes": 163716,
+      "width": 1280,
+      "height": 698,
+      "source": "margha.png",
+      "sourceSha256": "37088165b0bd331485fd35717e625382846311cfda7f4904499c56a6ee24c3c1"
+    },
+    {
+      "file": "prochoto-640.webp",
+      "bytes": 57238,
+      "width": 640,
+      "height": 349,
+      "source": "prochoto.png",
+      "sourceSha256": "108beb487cc82ba69e757c0efec327a7d9e910bd9b7c975c07ffd1fac6d9398b"
+    },
+    {
+      "file": "prochoto-1280.webp",
+      "bytes": 154304,
+      "width": 1280,
+      "height": 698,
+      "source": "prochoto.png",
+      "sourceSha256": "108beb487cc82ba69e757c0efec327a7d9e910bd9b7c975c07ffd1fac6d9398b"
+    },
+    {
+      "file": "hawai-640.webp",
+      "bytes": 58300,
+      "width": 640,
+      "height": 349,
+      "source": "hawai.png",
+      "sourceSha256": "787900731a6da8925bdb40daca2ab36829b80739d2459dafadfa962bcce08593"
+    },
+    {
+      "file": "hawai-1280.webp",
+      "bytes": 152582,
+      "width": 1280,
+      "height": 698,
+      "source": "hawai.png",
+      "sourceSha256": "787900731a6da8925bdb40daca2ab36829b80739d2459dafadfa962bcce08593"
+    },
+    {
+      "file": "4-fromages-640.webp",
+      "bytes": 59060,
+      "width": 640,
+      "height": 349,
+      "source": "4fro.png",
+      "sourceSha256": "8cff7880a2462a5eb6fb16a8bf36dde2de474ae109e903f129526789767181a4"
+    },
+    {
+      "file": "4-fromages-1280.webp",
+      "bytes": 155132,
+      "width": 1280,
+      "height": 698,
+      "source": "4fro.png",
+      "sourceSha256": "8cff7880a2462a5eb6fb16a8bf36dde2de474ae109e903f129526789767181a4"
+    },
+    {
+      "file": "jadot-640.webp",
+      "bytes": 61508,
+      "width": 640,
+      "height": 349,
+      "source": "jadot.png",
+      "sourceSha256": "2278455ad5e775f5f7c95873ce62a50f7ddb42569a0fd590be87ee863f6998e9"
+    },
+    {
+      "file": "jadot-1280.webp",
+      "bytes": 160830,
+      "width": 1280,
+      "height": 698,
+      "source": "jadot.png",
+      "sourceSha256": "2278455ad5e775f5f7c95873ce62a50f7ddb42569a0fd590be87ee863f6998e9"
+    }
+  ]
+}
