@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La Mouna — Pizzeria Artisanale</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="panier.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -446,24 +447,64 @@
         </div>
         <div class="menu-grid menu-grid--simple">
           <div class="menu-item">
-            <span class="item-name">Scampi à l'ail</span>
-            <span class="item-dots"></span>
-            <span class="item-price">8,00 €</span>
+            <div class="item-details">
+              <span class="item-name">Scampi à l'ail</span>
+              <span class="item-dots"></span>
+              <span class="item-price">8,00 €</span>
+            </div>
+            <button
+              class="item-add-btn"
+              data-item="Scampi à l'ail"
+              data-price="8.00"
+              title="Ajouter au panier"
+            >
+              +
+            </button>
           </div>
           <div class="menu-item">
-            <span class="item-name">Scampi Diavola</span>
-            <span class="item-dots"></span>
-            <span class="item-price">8,00 €</span>
+            <div class="item-details">
+              <span class="item-name">Scampi Diavola</span>
+              <span class="item-dots"></span>
+              <span class="item-price">8,00 €</span>
+            </div>
+            <button
+              class="item-add-btn"
+              data-item="Scampi Diavola"
+              data-price="8.00"
+              title="Ajouter au panier"
+            >
+              +
+            </button>
           </div>
           <div class="menu-item">
-            <span class="item-name">Croquettes de Mozzarella</span>
-            <span class="item-dots"></span>
-            <span class="item-price">8,00 €</span>
+            <div class="item-details">
+              <span class="item-name">Croquettes de Mozzarella</span>
+              <span class="item-dots"></span>
+              <span class="item-price">8,00 €</span>
+            </div>
+            <button
+              class="item-add-btn"
+              data-item="Croquettes de Mozzarella"
+              data-price="8.00"
+              title="Ajouter au panier"
+            >
+              +
+            </button>
           </div>
           <div class="menu-item">
-            <span class="item-name">Scampi Gorgonzola</span>
-            <span class="item-dots"></span>
-            <span class="item-price">9,00 €</span>
+            <div class="item-details">
+              <span class="item-name">Scampi Gorgonzola</span>
+              <span class="item-dots"></span>
+              <span class="item-price">9,00 €</span>
+            </div>
+            <button
+              class="item-add-btn"
+              data-item="Scampi Gorgonzola"
+              data-price="9.00"
+              title="Ajouter au panier"
+            >
+              +
+            </button>
           </div>
         </div>
       </section>
@@ -1206,62 +1247,98 @@
             </div>
 
             <div class="form-group">
-              <label for="commande"
-                >Votre commande complète
-                <span class="required-star">*</span></label
+              <label
+                >Type de service <span class="required-star">*</span></label
               >
-              <textarea
-                id="commande"
-                name="commande"
-                rows="5"
-                placeholder="Détaillez votre commande (pizzas, plats, boissons, desserts…)"
-                required
-              ></textarea>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="service"
+                    value="surplace"
+                    required
+                  />
+                  <span class="radio-custom"></span>
+                  À venir chercher sur place
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="service" value="emporter" />
+                  <span class="radio-custom"></span>
+                  À emporter
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="service" value="livraison" />
+                  <span class="radio-custom"></span>
+                  À livrer
+                </label>
+              </div>
             </div>
 
-            <div class="form-row">
+            <!-- Section de livraison (affichée si "À livrer" sélectionné) -->
+            <div
+              class="delivery-section"
+              id="deliverySection"
+              style="display: none"
+            >
+              <h3>Informations de livraison</h3>
               <div class="form-group">
-                <label
-                  >Type de service <span class="required-star">*</span></label
+                <label for="zone"
+                  >Zone de livraison <span class="required-star">*</span></label
                 >
-                <div class="radio-group">
-                  <label class="radio-option">
-                    <input
-                      type="radio"
-                      name="service"
-                      value="surplace"
-                      required
-                    />
-                    <span class="radio-custom"></span>
-                    À venir chercher sur place
-                  </label>
-                  <label class="radio-option">
-                    <input type="radio" name="service" value="emporter" />
-                    <span class="radio-custom"></span>
-                    À livrer / À emporter
-                  </label>
-                </div>
+                <select id="zone" name="zone">
+                  <optgroup label="Gratuit">
+                    <option value="beaumont">Beaumont</option>
+                  </optgroup>
+                  <optgroup label="+2€ (gratuit dès 30€)">
+                    <option value="clermont">Clermont</option>
+                    <option value="entite">Villages entité</option>
+                  </optgroup>
+                  <optgroup label="+2€">
+                    <option value="grandrieu">Grand-Rieu</option>
+                    <option value="vergnies">Vergnies</option>
+                  </optgroup>
+                  <optgroup label="+3€">
+                    <option value="sivry">Sivry</option>
+                    <option value="bousignies">Bousignies-sur-Roc</option>
+                  </optgroup>
+                  <optgroup label="+4€ (min. 30€)">
+                    <option value="rance">Rance</option>
+                    <option value="sautin">Sautin</option>
+                    <option value="froidchapelle">Froidchapelle</option>
+                  </optgroup>
+                </select>
+                <div class="delivery-info" id="deliveryInfo"></div>
               </div>
-
               <div class="form-group">
-                <label>Paiement <span class="required-star">*</span></label>
-                <div class="radio-group">
-                  <label class="radio-option">
-                    <input
-                      type="radio"
-                      name="paiement"
-                      value="especes"
-                      required
-                    />
-                    <span class="radio-custom"></span>
-                    Espèces
-                  </label>
-                  <label class="radio-option">
-                    <input type="radio" name="paiement" value="payconiq" />
-                    <span class="radio-custom"></span>
-                    Virement / QR Payconiq
-                  </label>
-                </div>
+                <label for="adresse"
+                  >Adresse complète <span class="required-star">*</span></label
+                >
+                <input
+                  type="text"
+                  id="adresse"
+                  name="adresse"
+                  placeholder="Rue, numéro, code postal, ville"
+                />
+              </div>
+            </div>
+
+            <!-- Section panier -->
+            <div class="form-group">
+              <label>Votre panier <span class="required-star">*</span></label>
+              <div
+                id="cartDisplayInForm"
+                style="
+                  background: var(--bg-secondary, #f9f9f9);
+                  padding: 1rem;
+                  border-radius: 8px;
+                  margin-bottom: 1rem;
+                  max-height: 300px;
+                  overflow-y: auto;
+                "
+              >
+                <p style="color: #999; text-align: center; margin: 1rem 0">
+                  Cliquez sur "+" pour ajouter des articles
+                </p>
               </div>
             </div>
 
@@ -1281,6 +1358,27 @@
             </div>
 
             <div class="form-group">
+              <label>Paiement <span class="required-star">*</span></label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input
+                    type="radio"
+                    name="paiement"
+                    value="especes"
+                    required
+                  />
+                  <span class="radio-custom"></span>
+                  Espèces
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="paiement" value="payconiq" />
+                  <span class="radio-custom"></span>
+                  Virement / QR Payconiq
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
               <label for="notes"
                 >Notes <span class="optional-label">(facultatif)</span></label
               >
@@ -1290,6 +1388,51 @@
                 rows="3"
                 placeholder="Allergies, demandes particulières…"
               ></textarea>
+            </div>
+
+            <!-- Totaux -->
+            <div
+              class="form-row"
+              style="
+                background: var(--bg-secondary, #f9f9f9);
+                padding: 1rem;
+                border-radius: 8px;
+                margin: 1rem 0;
+              "
+            >
+              <div class="form-group" style="width: 100%">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  <span>Sous-total:</span>
+                  <span id="formTotalPrice">0,00 €</span>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  <span>Frais de livraison:</span>
+                  <span id="formDeliveryFee">0,00 €</span>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                  "
+                >
+                  <span>Total:</span>
+                  <span id="formTotalWithDelivery">0,00 €</span>
+                </div>
+              </div>
             </div>
 
             <button type="submit" class="form-submit">
@@ -1396,6 +1539,7 @@
       </div>
     </footer>
 
+    <script src="panier.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
