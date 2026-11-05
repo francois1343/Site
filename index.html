@@ -517,14 +517,30 @@
           <div class="section-rule"></div>
         </div>
 
-        <div class="pizza-filters">
-          <button class="filter-btn active" data-filter="all">Toutes</button>
-          <button class="filter-btn" data-filter="9">9 €</button>
-          <button class="filter-btn" data-filter="10">10 €</button>
-          <button class="filter-btn" data-filter="11">11 €</button>
-          <button class="filter-btn" data-filter="12">12–13 €</button>
-          <button class="filter-btn" data-filter="14">14–15 €</button>
-          <button class="filter-btn" data-filter="16">16 € +</button>
+        <div class="pizza-toolbar">
+          <div class="pizza-filters" id="pizzaFamilyFilters" aria-label="Filtrer les pizzas par style">
+            <button class="filter-btn active" type="button" data-family-filter="">Toutes</button>
+            <button class="filter-btn" type="button" data-family-filter="italiennes">Italiennes</button>
+            <button class="filter-btn" type="button" data-family-filter="speciales">Sp&eacute;ciales</button>
+          </div>
+          <div class="pizza-select-filters">
+            <label>Prix
+              <select id="pizzaPriceFilter">
+                <option value="all">Tous les prix</option>
+                <option value="under12">Moins de 12 &euro;</option>
+                <option value="12-13">De 12 &agrave; moins de 14 &euro;</option>
+                <option value="14-15">De 14 &agrave; moins de 16 &euro;</option>
+                <option value="16plus">16 &euro; et plus</option>
+              </select>
+            </label>
+            <label>Trier par
+              <select id="pizzaSort">
+                <option value="menu">Ordre de la carte</option>
+                <option value="price-asc">Prix croissant</option>
+                <option value="price-desc">Prix d&eacute;croissant</option>
+              </select>
+            </label>
+          </div>
         </div>
 
         <div class="pizza-grid" id="pizzaGrid">
@@ -963,6 +979,7 @@
             <div class="pizza-price">13,00 €</div>
           </div>
         </div>
+        <p id="pizzaEmpty" hidden>Aucune pizza ne correspond &agrave; ces filtres.</p>
       </section>
 
       <!-- ─── VIANDES ─────────────────────────── -->
@@ -1134,7 +1151,7 @@
         <div class="section-header">
           <div class="section-number">06</div>
           <h2 class="section-title">Les Boissons</h2>
-          <p class="section-subtitle">Toutes à 2,00 €</p>
+          <p class="section-subtitle">&Agrave; savourer bien fra&icirc;che.</p>
           <div class="section-rule"></div>
         </div>
         <div class="boissons-list">
@@ -1539,6 +1556,7 @@
       </div>
     </footer>
 
+    <script src="menu.js"></script>
     <script src="panier.js"></script>
     <script src="script.js"></script>
   </body>

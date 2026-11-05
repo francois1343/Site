@@ -29,57 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ─────────────────────────────────────────────
-     2. FILTRE PIZZAS PAR PRIX
-  ───────────────────────────────────────────── */
-  const filterBtns = document.querySelectorAll(".filter-btn");
-  const pizzaCards = document.querySelectorAll(".pizza-card");
-
-  // Correspondances tranche → prix numériques inclus
-  const filterRanges = {
-    all: null,
-    9: [9],
-    10: [10],
-    11: [11],
-    12: [12, 13],
-    14: [14, 15],
-    16: [16, 17, 18, 19, 20],
-  };
-
-  filterBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      // Mettre à jour le bouton actif
-      filterBtns.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      const filter = btn.getAttribute("data-filter");
-      const range = filterRanges[filter];
-
-      pizzaCards.forEach((card) => {
-        const price = parseInt(card.getAttribute("data-price"), 10);
-
-        if (!range || range.includes(price)) {
-          // Afficher avec animation
-          card.classList.remove("hidden");
-          card.style.animation =
-            "cardReveal 0.35s cubic-bezier(0.16, 1, 0.3, 1) both";
-        } else {
-          card.classList.add("hidden");
-        }
-      });
-    });
-  });
-
-  // Injection keyframe dynamique pour cardReveal
-  const styleSheet = document.createElement("style");
-  styleSheet.textContent = `
-    @keyframes cardReveal {
-      from { opacity: 0; transform: translateY(10px) scale(0.98); }
-      to   { opacity: 1; transform: translateY(0)    scale(1);    }
-    }
-  `;
-  document.head.appendChild(styleSheet);
-
-  /* ─────────────────────────────────────────────
      3. ANIMATIONS D'ENTRÉE AU SCROLL
   ───────────────────────────────────────────── */
   const animatedSections = document.querySelectorAll(

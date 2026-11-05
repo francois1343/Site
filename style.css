@@ -1250,4 +1250,20 @@ input, textarea, select { font-family: inherit; }
 ::selection {
   background: color-mix(in srgb, var(--terra) 25%, transparent);
   color: var(--text);
-}
+}/* Carte gérée depuis l’administration */
+.pizza-toolbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
+.pizza-select-filters{display:flex;align-items:end;gap:.8rem;flex-wrap:wrap}
+.pizza-select-filters label{display:grid;gap:.2rem;font:400 .65rem var(--font-sans);letter-spacing:.13em;text-transform:uppercase;color:var(--text-muted)}
+.pizza-select-filters select{min-width:145px;padding:.55rem 2rem .55rem .8rem;border:1px solid var(--border-mid);border-radius:50px;background:var(--bg-card);color:var(--text);font:400 .75rem var(--font-sans)}
+.pizza-card{padding:0 0 3rem}
+.pizza-photo{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--cream-deep)}
+.pizza-card-content{padding:1.2rem 1.4rem .3rem}
+.pizza-card .pizza-ingredients{min-height:2.35em}
+.pizza-card .pizza-price{margin-top:.4rem}
+.pizza-card .item-add-btn{z-index:2}
+.menu-item .item-description{font:300 .72rem/1.4 var(--font-sans);color:var(--text-muted);margin-top:.2rem}
+#pizzaEmpty{color:var(--text-muted);font:italic 1rem var(--font-serif);padding:1.5rem 0}
+.admin-link{color:inherit;text-decoration:none;border:1px solid currentColor;border-radius:6px;padding:.5rem .75rem;font-size:.75rem}
+.boisson-price{font:400 .85rem var(--font-sans);color:var(--accent);letter-spacing:.03em}
+[hidden]{display:none!important}
+.menu-item-photo{width:64px;height:48px;object-fit:cover;border-radius:5px;flex-shrink:0}

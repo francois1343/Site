@@ -123,74 +123,62 @@ function initializeCart() {
 }
 
 function loadPizzasWithButtons() {
-  // Ajouter les boutons "+" à toutes les pizzas automatiquement
-  const pizzaCards = document.querySelectorAll(".pizza-card");
-  pizzaCards.forEach((card) => {
-    const name = card.querySelector(".pizza-name")?.textContent;
-    const price = card.getAttribute("data-price");
-    const priceText = card.querySelector(".pizza-price")?.textContent;
-
+  document.querySelectorAll(".pizza-card").forEach((card) => {
+    const name = card.querySelector(".pizza-name")?.textContent?.trim();
+    const price = Number(card.getAttribute("data-price"));
     if (name && !card.querySelector(".item-add-btn")) {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "item-add-btn";
-      btn.setAttribute("data-item", name);
-      btn.setAttribute("data-price", price);
-      btn.setAttribute("title", "Ajouter au panier");
+      btn.dataset.item = name;
+      btn.dataset.price = String(price);
+      btn.dataset.menuId = name + "|" + Math.round(price * 100);
+      btn.setAttribute("aria-label", "Ajouter " + name + " au panier");
       btn.textContent = "+";
       card.appendChild(btn);
     }
   });
-
-  // Ajouter un bouton aux plats dont le prix est affiché dans une ligne de menu.
   document.querySelectorAll(".menu-item").forEach((item) => {
     const name = item.querySelector(".item-name")?.textContent?.trim();
-    const priceText = item.querySelector(".item-price")?.textContent;
-    const price = Number.parseFloat(priceText?.replace(",", "."));
-
-    if (
-      name &&
-      Number.isFinite(price) &&
-      !item.querySelector(".item-add-btn")
-    ) {
+    const priceText = item.querySelector(".item-price")?.textContent || "";
+    const price = Number.parseFloat(priceText.replace(",", "."));
+    if (name && Number.isFinite(price) && !item.querySelector(".item-add-btn")) {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "item-add-btn";
       btn.dataset.item = name;
-      btn.dataset.price = price;
-      btn.setAttribute("title", `Ajouter ${name} au panier`);
+      btn.dataset.price = String(price);
+      btn.dataset.menuId = name + "|" + Math.round(price * 100);
+      btn.setAttribute("aria-label", "Ajouter " + name + " au panier");
       btn.textContent = "+";
       item.appendChild(btn);
     }
   });
-
-  // Les boissons sont affichées sous forme d'étiquettes, avec un prix fixe de 2 €.
   document.querySelectorAll(".boisson-tag").forEach((tag) => {
-    const name = tag.textContent.trim();
+    if (tag.querySelector(".boisson-add-btn")) return;
+    const name = tag.textContent.trim(), price = 2;
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "boisson-add-btn";
     btn.dataset.item = name;
-    btn.dataset.price = "2";
-    btn.setAttribute("title", `Ajouter ${name} au panier`);
-    btn.setAttribute("aria-label", `Ajouter ${name} au panier`);
+    btn.dataset.price = String(price);
+    btn.dataset.menuId = name + "|" + Math.round(price * 100);
+    btn.setAttribute("aria-label", "Ajouter " + name + " au panier");
     btn.textContent = "+";
     tag.appendChild(btn);
   });
-
-  // Ajouter les listeners aux boutons existants
-  document
-    .querySelectorAll(".item-add-btn, .boisson-add-btn")
-    .forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        const name = btn.getAttribute("data-item");
-        const price = parseFloat(btn.getAttribute("data-price"));
-        if (name && Number.isFinite(price)) {
-          addToCart(name, price);
-        }
-      });
-    });
+  document.addEventListener("click", (event) => {
+    const remove = event.target.closest(".cart-item-remove[data-cart-id]");
+    if (remove) { event.preventDefault(); removeFromCart(remove.dataset.cartId); return; }
+    const button = event.target.closest(".item-add-btn, .boisson-add-btn");
+    if (!button) return;
+    event.preventDefault();
+    const name = button.dataset.item || button.getAttribute("data-item");
+    const price = Number(button.dataset.price || button.getAttribute("data-price"));
+    const menuId = button.dataset.menuId || (name + "|" + Math.round(price * 100));
+    if (name && Number.isFinite(price)) addToCart(name, price, menuId);
+  });
+  document.addEventListener("lamouna:menu-loaded", (event) => syncCartWithMenu(event.detail?.items || []));
 }
 
 function setupEventListeners() {
@@ -260,27 +248,32 @@ function setupEventListeners() {
    GESTION DU PANIER
 ───────────────────────────────────────────── */
 
-function addToCart(name, price) {
-  const existingItem = cartState.items.find((item) => item.name === name && item.price === price);
-
-  if (existingItem) {
-    existingItem.quantity++;
-  } else {
-    cartState.items.push({
-      id: Math.random().toString(36).substr(2, 9),
-      name,
-      price,
-      quantity: 1,
-    });
-  }
-
+function addToCart(name, price, menuId) {
+  const stableMenuId = menuId || (name + "|" + Math.round(price * 100));
+  const existingItem = cartState.items.find((item) =>
+    item.menuId ? item.menuId === stableMenuId : (item.name === name && item.price === price)
+  );
+  if (existingItem) existingItem.quantity++;
+  else cartState.items.push({id:Math.random().toString(36).substr(2,9),name,price,menuId:stableMenuId,quantity:1});
   updateCartDisplay();
   saveCartToStorage();
-
-  // Animation du badge
-  const badge = document.getElementById("cartBadge");
+  const badge=document.getElementById("cartBadge");
   badge.classList.add("item-added-animation");
-  setTimeout(() => badge.classList.remove("item-added-animation"), 500);
+  setTimeout(()=>badge.classList.remove("item-added-animation"),500);
+}
+
+function syncCartWithMenu(items) {
+  const byId=new Map(items.map(item=>[item.id,item])),byName=new Map();
+  for(const item of items){const rows=byName.get(item.name)||[];rows.push(item);byName.set(item.name,rows);}
+  let changed=false;const next=[];
+  for(const cartItem of cartState.items){
+    const matches=byName.get(cartItem.name)||[];
+    const product=byId.get(cartItem.menuId)||matches.find(item=>item.priceCents===Math.round(cartItem.price*100))||(matches.length===1?matches[0]:null);
+    if(!product||!product.active){changed=true;continue;}
+    if(cartItem.menuId!==product.id||cartItem.name!==product.name||cartItem.price!==product.priceCents/100)changed=true;
+    cartItem.menuId=product.id;cartItem.name=product.name;cartItem.price=product.priceCents/100;next.push(cartItem);
+  }
+  if(changed){cartState.items=next;updateCartDisplay();saveCartToStorage();}
 }
 
 function removeFromCart(itemId) {
@@ -290,6 +283,12 @@ function removeFromCart(itemId) {
     updateCartDisplay();
     saveCartToStorage();
   }
+}
+
+function escapeCartText(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"
+  }[char]));
 }
 
 function updateCartDisplay() {
@@ -314,10 +313,10 @@ function updateCartDisplay() {
       .map(
         (item) => `
       <div class="cart-item">
-        <span class="cart-item-name">${item.name}</span>
+        <span class="cart-item-name">${escapeCartText(item.name)}</span>
         <span class="cart-item-qty">${item.quantity}x</span>
         <span style="min-width: 50px; text-align: right;">${(item.price * item.quantity).toFixed(2).replace(".", ",")} €</span>
-        <button class="cart-item-remove" onclick="removeFromCart('${item.id}')">✕</button>
+        <button type="button" class="cart-item-remove" data-cart-id="${escapeCartText(item.id)}" aria-label="Retirer ${escapeCartText(item.name)} du panier">✕</button>
       </div>
     `,
       )
@@ -347,7 +346,7 @@ function updateFormDisplay() {
         (item) => `
       <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 1px solid #ddd;">
         <div>
-          <strong>${item.name}</strong>
+          <strong>${escapeCartText(item.name)}</strong>
           <br>
           <small style="color: #999;">${item.quantity}x ${item.price.toFixed(2).replace(".", ",")} €</small>
         </div>
@@ -486,7 +485,7 @@ async function handleFormSubmit(e) {
     zone,
     items: cartState.items.map((item) => ({
       name: item.name,
-      menuId: item.name + "|" + Math.round(item.price * 100),
+      menuId: item.menuId || item.name + "|" + Math.round(item.price * 100),
       price: item.price,
       quantity: item.quantity,
     })),
