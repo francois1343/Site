@@ -4,12 +4,15 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const out = path.join(root, 'dist');
+const menu = JSON.parse(fs.readFileSync(path.join(root,'menu.json'),'utf8'));
+const imageNames = [...new Set(menu.items.filter(item=>item.image).map(item=>item.image))];
+if (imageNames.some(name=>typeof name!=='string'||!/^[a-z0-9-]+$/.test(name))) throw Error('Nom de visuel interdit');
 const files = [
   'index.html','style.css','atelier.css','script.js','cart.mjs','menu.json','pwa.js',
   'manifest.webmanifest','images/mark.svg',
   ...['favicon.ico','favicon-16x16.png','favicon-32x32.png','apple-touch-icon.png',
     'pwa-192x192.png','pwa-512x512.png','maskable-192x192.png','maskable-512x512.png'].map(n=>'icons/'+n),
-  ...['margarita','prochoto','hawai','4-fromages','jadot','bianca','rimini'].flatMap(n=>[640,1280].map(s=>'images/'+n+'-'+s+'.webp'))
+  ...imageNames.flatMap(n=>[640,1280].map(s=>'images/'+n+'-'+s+'.webp'))
 ];
 for (const f of [...files, 'sw.js']) {
   const file=path.join(root,f);

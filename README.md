@@ -2,7 +2,7 @@
 
 Production : **https://lamouna.vercel.app/** · dépôt `francois1343/Site`, branche `main`.
 
-La version du 3 novembre 2026 reprend la carte publiée : **54 pizzas, 91 références au total, sept catégories**. Les sept illustrations (Margarita, Prochoto, Hawai, 4 Fromages et Jadot fournies initialement, puis Bianca et Rimini générées) accompagnent les recettes correspondantes. Les autres fiches affichent leurs ingrédients sans inventer une image du plat. Le clair/sombre conserve la préférence existante.
+La version du 11 novembre 2026 conserve **54 pizzas et 91 références, réparties en sept catégories**. **53 pizzas sont illustrées** : les sept visuels précédents sont conservés et 46 illustrations retrouvées ont été associées à partir de l’ordre de la carte du site et des garnitures visibles. Raclette reste sans image. Les associations sont à confirmer par la pizzeria ; prix et recettes sont inchangés. Le clair/sombre conserve la préférence existante.
 
 ## Parcours client
 
@@ -21,7 +21,7 @@ Le terminal cuisine développé séparément dans le Cerveau/La Mouna n'est pas 
 
 `menu.json` conserve la provenance et l'empreinte de l'HTML source. La référence précédente est archivée sous `source/`, exclue du site construit. Les outils sous `tools/` servent à extraire et vérifier la carte, pas à recréer automatiquement les sources du commerçant.
 
-Les PNG d'origine sont restés sur le PC. Les exports WebP conservent le cadre entier et la marque existante : 640 et 1280 px, `srcset`, dimensions explicites et chargement différé des cartes. Les dix exports totalisent environ 1,08 Mo. `images/provenance.json` conserve les noms et empreintes des fichiers fournis ; il n'est pas publié par le build. Il ne constitue pas une preuve de licence des illustrations.
+Les PNG d'origine sont restés sur le PC. Les exports WebP conservent le cadre entier et la marque existante : 640 et 1280 px, `srcset`, dimensions explicites et chargement différé des cartes. Les dix premiers exports totalisaient environ 1,08 Mo. `images/provenance.json` conserve les noms et empreintes des fichiers fournis ; il n'est pas publié par le build. Il ne constitue pas une preuve de licence des illustrations.
 
 Le panier utilise `localStorage` sur l'origine du site. Aucun compte, donnée bancaire, traqueur ou synchronisation du panier avec un autre appareil n'est ajouté. Les polices système évitent les requêtes Google Fonts et restent disponibles hors ligne.
 
@@ -35,10 +35,29 @@ Les tests couvrent fiches, ajout, quantités, persistance, copie, catégories, r
 
 ## Version visuelle et PWA
 
-Galerie des sept pizzas, miniatures interactives, filtre En images, catégories illustrées et navigation basse téléphone/tablette. Identité crème/vert/terre cuite inspirée des compositions de Jule, avec les illustrations existantes.
+Galerie des pizzas illustrées, miniatures interactives, filtre En images, catégories illustrées et navigation basse téléphone/tablette. Identité crème/vert/terre cuite inspirée des compositions de Jule, avec les illustrations existantes.
 
 Installation discrète, icônes complètes, carte hors ligne après précache, indication de connexion et mises à jour par « J’ai compris ». Panier conservé ; brouillon privé à l’onglet. Aucun paiement, envoi de commande ou Web Push activé. Les 13 volets du prompt et leurs limites sont détaillés dans [docs/PWA.md](docs/PWA.md).
 
 ### Bianca et Rimini
 
 Deux illustrations générées ajoutées aux bonnes recettes, à la galerie, au filtre En images et au cache PWA. Exports WebP 640/1280 px, qualité 92, sans recadrage ; originaux conservés séparément. Les prix et ingrédients restent inchangés. La galerie défile horizontalement lorsque sept miniatures ne tiennent pas sur le petit écran.
+
+
+## Visuels retrouvés — 11 novembre 2026
+
+Les 47 images de la galerie locale n’étaient pas publiées. Après rapprochement
+avec l’ordre de la carte du site indiqué par François et examen visuel des
+garnitures, 46 recettes reçoivent leur illustration : **53 pizzas illustrées sur
+54**. La Bianca déjà présente est conservée (photo-01 fait doublon probable) ;
+la Raclette reste sans image faute de correspondance suffisamment claire.
+Les rapprochements sont éditoriaux, à confirmer par la pizzeria ; ce ne sont pas
+des photographies contractuelles ni une validation des ingrédients/allergènes.
+
+`images/recovered-provenance.json` conserve les associations, dimensions et
+empreintes des originaux/exports. Les originaux du Bureau restent inchangés.
+`tools/prepare-recovered-images.py` produit seulement des exports WebP du cadre
+entier. Les 92 nouveaux fichiers pèsent 9,91 Mo (décimaux). La galerie, les fiches,
+le filtre En images et le cache PWA utilisent maintenant la même carte.
+Le build ne publie que les images nommées par la carte ; aucune base du terminal,
+clé ou configuration locale n’est incluse. Prix, identifiants et recettes inchangés.

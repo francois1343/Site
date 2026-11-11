@@ -1,0 +1,1071 @@
+{
+  "checkedAt": "2026-11-11",
+  "kind": "Recovered user illustrations, technical encoding only",
+  "merchantValidated": false,
+  "excluded": {
+    "photo-01.png": "Bianca illustration already present"
+  },
+  "unmatchedRecipes": [
+    "Raclette"
+  ],
+  "items": [
+    {
+      "recipe": "Piemontaise",
+      "itemId": "pizzas/Piemontaise|1000",
+      "source": "photo-02.jpg",
+      "sourceSha256": "7d9c53f9c0fc7e62504bd741fd1169ad74c29ba0a847f87211de6886087f7783",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-02-640.webp",
+          "bytes": 57852,
+          "width": 640,
+          "height": 357,
+          "sha256": "522ff8043f86abcb71ed901e5e4a2a763bb83c03506b96e91ff3146af038a863"
+        },
+        {
+          "file": "recovered-02-1280.webp",
+          "bytes": 160028,
+          "width": 1279,
+          "height": 714,
+          "sha256": "120d36e72da982fccfe69ea60668708973aa9638979b6c7fff650c3524f960ed"
+        }
+      ]
+    },
+    {
+      "recipe": "Veniziana",
+      "itemId": "pizzas/Veniziana|1000",
+      "source": "photo-03.jpg",
+      "sourceSha256": "1607ad8e0ce2af2393a47c8ddfe8b03023fd4f316927bc8e72302b4cd5edaba5",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-03-640.webp",
+          "bytes": 57280,
+          "width": 640,
+          "height": 357,
+          "sha256": "50b2ef1c38015b71f37fe384a17a4814b37c17c715ca02f8207e5ee482478ef4"
+        },
+        {
+          "file": "recovered-03-1280.webp",
+          "bytes": 159466,
+          "width": 1279,
+          "height": 714,
+          "sha256": "50ce8d00597d67d990067b0ae2e8c8241faad7415b4e379bad2d94a9678e2c31"
+        }
+      ]
+    },
+    {
+      "recipe": "Salami",
+      "itemId": "pizzas/Salami|1000",
+      "source": "photo-04.jpg",
+      "sourceSha256": "b3bce09e69ba623caec9de2caf880e0ed3819f0dc8f6f4566313698f9953f98b",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-04-640.webp",
+          "bytes": 57852,
+          "width": 640,
+          "height": 357,
+          "sha256": "f30e315c163e2a0638134ab61b840c84c085722d2beb96e6000da6b83d46e84b"
+        },
+        {
+          "file": "recovered-04-1280.webp",
+          "bytes": 160756,
+          "width": 1279,
+          "height": 714,
+          "sha256": "ad14adec518daf52364d5392a8a33021c2646336603b124197359c7c1ece2ae7"
+        }
+      ]
+    },
+    {
+      "recipe": "Napolitaine",
+      "itemId": "pizzas/Napolitaine|1000",
+      "source": "photo-05.jpg",
+      "sourceSha256": "f3222622c7ecb8e1513a2f4393d11f53c26b24da3fecb356e80c2c541f7e006e",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-05-640.webp",
+          "bytes": 56396,
+          "width": 640,
+          "height": 357,
+          "sha256": "4506dfa44551b37a783e501d14e79cd96ba2c87697c70b0d15cc1d1f111458fb"
+        },
+        {
+          "file": "recovered-05-1280.webp",
+          "bytes": 158498,
+          "width": 1279,
+          "height": 714,
+          "sha256": "f1902c15b9b74760ec6e5475d9f6309007fa022f7d840aa64df69cc244a849ba"
+        }
+      ]
+    },
+    {
+      "recipe": "Diavolo",
+      "itemId": "pizzas/Diavolo|1100",
+      "source": "photo-06.jpg",
+      "sourceSha256": "bc11a576a5c3a40563fbafa1da4ff9d0e483dbbdd0cf676366761cc4560babb2",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-06-640.webp",
+          "bytes": 55452,
+          "width": 640,
+          "height": 357,
+          "sha256": "3b19a31da26ebdfa3917e61d7486ac0d28f34bfc18a16c20cc3dba360ca95949"
+        },
+        {
+          "file": "recovered-06-1280.webp",
+          "bytes": 153972,
+          "width": 1279,
+          "height": 714,
+          "sha256": "3e92dbf3238e3305801567f6eeddd975e54a7353030c0639cfcba1187d42b116"
+        }
+      ]
+    },
+    {
+      "recipe": "Thon",
+      "itemId": "pizzas/Thon|1100",
+      "source": "photo-07.jpg",
+      "sourceSha256": "31b30e17d456f5063667fb7384b365aef68a5b2fe8d4b37fe942397c8f6ca031",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-07-640.webp",
+          "bytes": 56324,
+          "width": 640,
+          "height": 357,
+          "sha256": "2e6cb99fe227d7fdcd8130d37a6dbad48e5015a7ff50fc70e0966eb1f5fcc193"
+        },
+        {
+          "file": "recovered-07-1280.webp",
+          "bytes": 154702,
+          "width": 1279,
+          "height": 714,
+          "sha256": "8dab6c8a8fc750d725897166fefa07acf4c4a457dc8a2a43b835425c127b8db7"
+        }
+      ]
+    },
+    {
+      "recipe": "4 Saisons",
+      "itemId": "pizzas/4 Saisons|1100",
+      "source": "photo-08.jpg",
+      "sourceSha256": "69cc6a77824f13b7ee3fc542a85e7cfa122b1e5c68399e5aeb92fe27467e0418",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-08-640.webp",
+          "bytes": 54968,
+          "width": 640,
+          "height": 357,
+          "sha256": "f10988729b175c1c8634c1cd58d3dfb706192dc2f6c0bc2d9d933b4359dd054f"
+        },
+        {
+          "file": "recovered-08-1280.webp",
+          "bytes": 151722,
+          "width": 1279,
+          "height": 714,
+          "sha256": "8e9f5ce099f58bd087464b8f765888a92a3f444ac6be8545c9502d5ae69f6858"
+        }
+      ]
+    },
+    {
+      "recipe": "Sicilienne",
+      "itemId": "pizzas/Sicilienne|1100",
+      "source": "photo-09.jpg",
+      "sourceSha256": "6252e2c9eb6b198f0368006476085730bd6f0ee511dc7d5d0d48fecbec634c72",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-09-640.webp",
+          "bytes": 55300,
+          "width": 640,
+          "height": 357,
+          "sha256": "6e0a7e8c7c2b82cd7bf6c853ac38b083b688310c7157f27b8863671eacb4a74f"
+        },
+        {
+          "file": "recovered-09-1280.webp",
+          "bytes": 153666,
+          "width": 1279,
+          "height": 714,
+          "sha256": "88e4205ef626ceecc330b46445ccb15ac7b5f7fefd9a5bd6114733f8ff27bf45"
+        }
+      ]
+    },
+    {
+      "recipe": "Végétarienne",
+      "itemId": "pizzas/Végétarienne|1100",
+      "source": "photo-10.jpg",
+      "sourceSha256": "06a76e70a5daa63110b141251d753f1f687ed261a54a8d967d9b7f4e56b1f027",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-10-640.webp",
+          "bytes": 54666,
+          "width": 640,
+          "height": 357,
+          "sha256": "1e7669f17db7c4cc6edc63f2b5c7db07e1bbd31a8a16be6d40b1bcbd368c28f4"
+        },
+        {
+          "file": "recovered-10-1280.webp",
+          "bytes": 150838,
+          "width": 1279,
+          "height": 714,
+          "sha256": "9f6d6dbbc9b2d1241357cb37cc002fb312d69656a4bf69cf28527de8b3306551"
+        }
+      ]
+    },
+    {
+      "recipe": "Lardière",
+      "itemId": "pizzas/Lardière|1100",
+      "source": "photo-11.jpg",
+      "sourceSha256": "1544036fefbcede60b7071699e06446ae640c0a3e2f039d485340c6c86cc6a74",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-11-640.webp",
+          "bytes": 56114,
+          "width": 640,
+          "height": 357,
+          "sha256": "3d2ef504ee88c1dd762df0c011395697f699a0b7c9d6e714f55dc2a91a60e756"
+        },
+        {
+          "file": "recovered-11-1280.webp",
+          "bytes": 155822,
+          "width": 1279,
+          "height": 714,
+          "sha256": "3c842081a5e772de557f415b50712635173d21fbafa2d67e09672b2759ac6a7a"
+        }
+      ]
+    },
+    {
+      "recipe": "Merguez",
+      "itemId": "pizzas/Merguez|1100",
+      "source": "photo-12.jpg",
+      "sourceSha256": "e307a3d6f037d039f29dd6e55b791ec841b781a05190d4b2ea13cee3cbc32f52",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-12-640.webp",
+          "bytes": 57706,
+          "width": 640,
+          "height": 357,
+          "sha256": "258f1e9df446dc7c8fb3302ec54b62f4d788c253ff368c9b4f1b20345c9e7316"
+        },
+        {
+          "file": "recovered-12-1280.webp",
+          "bytes": 158764,
+          "width": 1279,
+          "height": 714,
+          "sha256": "8d0e4715b8e8610d11b9ba32b8f199f3346986d664df56ad8f8c88e2b8f1a761"
+        }
+      ]
+    },
+    {
+      "recipe": "Parmigiann",
+      "itemId": "pizzas/Parmigiann|1100",
+      "source": "photo-13.jpg",
+      "sourceSha256": "60fc29ff03ea2f3549d04cc5b5a1f2ad37de123c0976d8463952ff90541b6349",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-13-640.webp",
+          "bytes": 59492,
+          "width": 640,
+          "height": 357,
+          "sha256": "da6be6d3cf238852a1932273292f1553db65b945e3cfa133e36cf1d84eaccbe9"
+        },
+        {
+          "file": "recovered-13-1280.webp",
+          "bytes": 163150,
+          "width": 1279,
+          "height": 714,
+          "sha256": "1024dd5c69f1f84aede99fdd663217a89425bda4c3d24db455e9fc90f5fffb4d"
+        }
+      ]
+    },
+    {
+      "recipe": "Capresse",
+      "itemId": "pizzas/Capresse|1100",
+      "source": "photo-14.jpg",
+      "sourceSha256": "2bf7269a7e4ce6b950dd440f7a540d9c756f65cb833785cf803d6ce61d6dd221",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-14-640.webp",
+          "bytes": 55870,
+          "width": 640,
+          "height": 357,
+          "sha256": "32683693951c6dbc9b333e47183c3df87e4fbaa6c28ac694f7e4de72d932793a"
+        },
+        {
+          "file": "recovered-14-1280.webp",
+          "bytes": 154566,
+          "width": 1279,
+          "height": 714,
+          "sha256": "50fee222273b66eca896d7315bf4a90860440df617e77903b0d6390ec0125dac"
+        }
+      ]
+    },
+    {
+      "recipe": "Calzone",
+      "itemId": "pizzas/Calzone|1100",
+      "source": "photo-15.jpg",
+      "sourceSha256": "c336f704e14ccb12c448be7f66b73de5148f667ed43107ae6f84cf56eb37c54f",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-15-640.webp",
+          "bytes": 56688,
+          "width": 640,
+          "height": 357,
+          "sha256": "d4173d8a6dbd250eb39f8f0065527dd5a63969bf3791534dd8f818ffad74fef9"
+        },
+        {
+          "file": "recovered-15-1280.webp",
+          "bytes": 163260,
+          "width": 1279,
+          "height": 714,
+          "sha256": "11dd3951f4ac99eb04191fe251692146bc31e2e99f913e2f9e9b7905812f9a96"
+        }
+      ]
+    },
+    {
+      "recipe": "Bolognaise",
+      "itemId": "pizzas/Bolognaise|1300",
+      "source": "photo-16.jpg",
+      "sourceSha256": "5e3e818aa29a49c390f26934c2d8cb1fe20e97af86c49ba8300dcc1d49a449c7",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-16-640.webp",
+          "bytes": 61590,
+          "width": 640,
+          "height": 357,
+          "sha256": "61b2edcef27af451a20782a66bcf17cd4474645816fad55b5ae972e54aede124"
+        },
+        {
+          "file": "recovered-16-1280.webp",
+          "bytes": 172802,
+          "width": 1279,
+          "height": 714,
+          "sha256": "41e463a2cd5487e65bdc7c7ed1d9e08e492925138a20d234469c8f376a789491"
+        }
+      ]
+    },
+    {
+      "recipe": "Chop",
+      "itemId": "pizzas/Chop|1200",
+      "source": "photo-17.jpg",
+      "sourceSha256": "5341602d86953af3b5d974ed5c951adba97d502200829134fb0f2f0d248ceff0",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-17-640.webp",
+          "bytes": 57956,
+          "width": 640,
+          "height": 357,
+          "sha256": "588835e7f20e3e52b026def913bf77d0c687dfa39500a90c15de9427ce507afe"
+        },
+        {
+          "file": "recovered-17-1280.webp",
+          "bytes": 163940,
+          "width": 1279,
+          "height": 714,
+          "sha256": "7e50a255739d993cae9b5d40b58e9f2f2614641e265340537a752d6e6f7da879"
+        }
+      ]
+    },
+    {
+      "recipe": "Marinara",
+      "itemId": "pizzas/Marinara|1300",
+      "source": "photo-18.jpg",
+      "sourceSha256": "8b583dfbe293f8f8b9fc8706d9b40ca8160bb45e2c7aeb1e2ed1623875698956",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-18-640.webp",
+          "bytes": 52782,
+          "width": 640,
+          "height": 357,
+          "sha256": "3d3d098f33d062f9b3d414713f53685f09907d878e423d051a91ab0b2b766ad2"
+        },
+        {
+          "file": "recovered-18-1280.webp",
+          "bytes": 147812,
+          "width": 1279,
+          "height": 714,
+          "sha256": "b02d5d510f780412dc2d2aa32ddae0d18df473dbe9196e75cf5a5619f4b5a7ae"
+        }
+      ]
+    },
+    {
+      "recipe": "Chèvre",
+      "itemId": "pizzas/Chèvre|1300",
+      "source": "photo-19.jpg",
+      "sourceSha256": "6ca99bda1ca28ab639d75ba65bb8694103c3bf4e1eaa8ffc142e8bc55cfc8cb7",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-19-640.webp",
+          "bytes": 49264,
+          "width": 640,
+          "height": 357,
+          "sha256": "1ae007bf24e0b004d083d8a66875e695dc858230074793ce3ce42a606cafbb5a"
+        },
+        {
+          "file": "recovered-19-1280.webp",
+          "bytes": 140358,
+          "width": 1279,
+          "height": 714,
+          "sha256": "bd0a01a9e68cb520580e2b66edc3a59ca31ee5767f14790eb7cecd33c22a3a54"
+        }
+      ]
+    },
+    {
+      "recipe": "Carpaccio",
+      "itemId": "pizzas/Carpaccio|1300",
+      "source": "photo-20.jpg",
+      "sourceSha256": "372de7f5492b87a1357a4847bd8557fe1b189dbbbb64b404dc1a87df7d5ce755",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-20-640.webp",
+          "bytes": 53924,
+          "width": 640,
+          "height": 357,
+          "sha256": "188d014b84c311c1b6efc0a1833ad0f83aa34891e163a3b72f914a245a7c5ab9"
+        },
+        {
+          "file": "recovered-20-1280.webp",
+          "bytes": 152184,
+          "width": 1279,
+          "height": 714,
+          "sha256": "99f28c49561652e8ed5fdea84d0300a1b4777f5e34fbaa296ce951bd744bacb3"
+        }
+      ]
+    },
+    {
+      "recipe": "Scampi",
+      "itemId": "pizzas/Scampi|1300",
+      "source": "photo-21.jpg",
+      "sourceSha256": "83ebabda1ca3768c28ad430ad801afbc12409552947210e300debfc09cb7538a",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-21-640.webp",
+          "bytes": 52370,
+          "width": 640,
+          "height": 357,
+          "sha256": "9869cd5e1ac406fb738fbf5e9d993bb2d5766b8bb3a47e5c2b09a906e4aa5840"
+        },
+        {
+          "file": "recovered-21-1280.webp",
+          "bytes": 146730,
+          "width": 1279,
+          "height": 714,
+          "sha256": "90a63b0e4a73fe3fb41719f4455d771ed5070d184ea7a70e5edbab4dc8ad82ce"
+        }
+      ]
+    },
+    {
+      "recipe": "Saumon",
+      "itemId": "pizzas/Saumon|1300",
+      "source": "photo-22.jpg",
+      "sourceSha256": "e1202604f4fa2efd1054598d137b2ca52bf4d743195ac6d64d4ce4af6256366c",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-22-640.webp",
+          "bytes": 49698,
+          "width": 640,
+          "height": 357,
+          "sha256": "86f9485e34d8cf944a933720cc24527ecb591c35f5581c118f6825650af03f3e"
+        },
+        {
+          "file": "recovered-22-1280.webp",
+          "bytes": 141158,
+          "width": 1279,
+          "height": 714,
+          "sha256": "baf89dc8c8ef9fb3808424146b220fc0a538b6316fd109403f519ffb2c1b0ce7"
+        }
+      ]
+    },
+    {
+      "recipe": "Chef",
+      "itemId": "pizzas/Chef|1400",
+      "source": "photo-23.jpg",
+      "sourceSha256": "45a12843e7b826e8208f1ffbc8dd74c610702e2783dea48b03427c5143245e81",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-23-640.webp",
+          "bytes": 53836,
+          "width": 640,
+          "height": 357,
+          "sha256": "85b172293e297f2195590b046ef7e842c7aed1d6bbd4324b7481254e0237aa90"
+        },
+        {
+          "file": "recovered-23-1280.webp",
+          "bytes": 156360,
+          "width": 1279,
+          "height": 714,
+          "sha256": "859ae65a3b0abc060b87ed0ab3c231f441c635cca57a46b987edd5095b378de6"
+        }
+      ]
+    },
+    {
+      "recipe": "Feta",
+      "itemId": "pizzas/Feta|1300",
+      "source": "photo-24.jpg",
+      "sourceSha256": "bcd7b6c79d63503f68c9c01bf604b1ace63d9591d5fdf466a05a5697fbc806a3",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-24-640.webp",
+          "bytes": 55836,
+          "width": 640,
+          "height": 357,
+          "sha256": "2a8ff1caa05656299339ae0affb9ec3071fe218616555d327f896a46bb180b5f"
+        },
+        {
+          "file": "recovered-24-1280.webp",
+          "bytes": 157800,
+          "width": 1279,
+          "height": 714,
+          "sha256": "a065300bf2fcf4588d705a3e20a717b6bb84100f6bbce00a0bcca0e13a8ea55d"
+        }
+      ]
+    },
+    {
+      "recipe": "5 Fromages",
+      "itemId": "pizzas/5 Fromages|1300",
+      "source": "photo-25.jpg",
+      "sourceSha256": "5e6d672205d9fa1184d006ddacc70243f50a0220e39fa3bb02b957beb5761cda",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-25-640.webp",
+          "bytes": 49460,
+          "width": 640,
+          "height": 357,
+          "sha256": "1a94650476868c6dae2c35f65e1665fbed11e5088a8df97b94afb82b6a30d948"
+        },
+        {
+          "file": "recovered-25-1280.webp",
+          "bytes": 140946,
+          "width": 1279,
+          "height": 714,
+          "sha256": "bb92f4f20a22516558e2151e23c0fdc93752b3f13f4be88e794ecbfe8444a690"
+        }
+      ]
+    },
+    {
+      "recipe": "Recola",
+      "itemId": "pizzas/Recola|1300",
+      "source": "photo-26.jpg",
+      "sourceSha256": "2ffba84be34e8c4125d332c06a954fd6c395addefe97e0cfc9611eef58bd96f5",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-26-640.webp",
+          "bytes": 53524,
+          "width": 640,
+          "height": 357,
+          "sha256": "aab5f09ba90c286db216832a58267a571d95b079a01e1353d07c4a0fb9e77772"
+        },
+        {
+          "file": "recovered-26-1280.webp",
+          "bytes": 153290,
+          "width": 1279,
+          "height": 714,
+          "sha256": "55928917364d0bedd228df791a9f8667f043ce44c998c38ad236eda0f5286d9f"
+        }
+      ]
+    },
+    {
+      "recipe": "Mexicaine",
+      "itemId": "pizzas/Mexicaine|1300",
+      "source": "photo-27.jpg",
+      "sourceSha256": "c48df9b17679dfead8691a86331cb12d20a3d3abd127387ee9c456d6f84a26ce",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-27-640.webp",
+          "bytes": 55706,
+          "width": 640,
+          "height": 357,
+          "sha256": "e447bf6a96172b2d9fa342e0068309423cec49c8439627f480015f07769379ee"
+        },
+        {
+          "file": "recovered-27-1280.webp",
+          "bytes": 161518,
+          "width": 1279,
+          "height": 714,
+          "sha256": "b923c8168dfbc9fb557a43aa175fcf8fbb01f5405bee00aa7eade42e21c8d947"
+        }
+      ]
+    },
+    {
+      "recipe": "Calabrese",
+      "itemId": "pizzas/Calabrese|1300",
+      "source": "photo-28.jpg",
+      "sourceSha256": "ae40fd340ed7a49ae972e89cd34791f73f70380fad4d8f361dcc94cc40aa85ae",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-28-640.webp",
+          "bytes": 54420,
+          "width": 640,
+          "height": 357,
+          "sha256": "2ca9b0bfb9330cc7449b36d327a1ff57929bac4a4a77309290aa4abd85b5c7fc"
+        },
+        {
+          "file": "recovered-28-1280.webp",
+          "bytes": 156294,
+          "width": 1279,
+          "height": 714,
+          "sha256": "8f2e199f4f39030245a9eaea1b80c3a52fdfc511f1cc4de75defe761dffaeecc"
+        }
+      ]
+    },
+    {
+      "recipe": "Burger",
+      "itemId": "pizzas/Burger|1300",
+      "source": "photo-29.jpg",
+      "sourceSha256": "43499110123143a139a0fbf0d1cd860ae26933943432a423c610b94adb6628e3",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-29-640.webp",
+          "bytes": 57684,
+          "width": 640,
+          "height": 357,
+          "sha256": "fc935af7c368a8a9522da34e566f2aa75cc7e6f6d803448c7995ce01e7205a0d"
+        },
+        {
+          "file": "recovered-29-1280.webp",
+          "bytes": 164422,
+          "width": 1279,
+          "height": 714,
+          "sha256": "6e98b82ac7ce2b0d44d63ae763d5e15ead669cf1f946bfad0eb30975c95a55ff"
+        }
+      ]
+    },
+    {
+      "recipe": "Maison",
+      "itemId": "pizzas/Maison|1300",
+      "source": "photo-30.jpg",
+      "sourceSha256": "b0c41527598a5438a7632820b7f3fa403d780c042571f32f68efcf85c9f52d1b",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-30-640.webp",
+          "bytes": 52718,
+          "width": 640,
+          "height": 357,
+          "sha256": "6312da7b912970b52c190b1f6f7714daac71453d1d69cfef1ff100de94e3d836"
+        },
+        {
+          "file": "recovered-30-1280.webp",
+          "bytes": 154094,
+          "width": 1279,
+          "height": 714,
+          "sha256": "2cf8f71032530ef50027d51f2566a6ba256daa91ae03956c285af7db205c5e3d"
+        }
+      ]
+    },
+    {
+      "recipe": "Gyros",
+      "itemId": "pizzas/Gyros|1300",
+      "source": "photo-31.jpg",
+      "sourceSha256": "ca2d679d23b504045e70c1d5c559d436c8eba4be8a53fa1b29eb35c70a5c11b9",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-31-640.webp",
+          "bytes": 51178,
+          "width": 640,
+          "height": 357,
+          "sha256": "7928d81cadc852d4bf068fd2e0580622922c8c0e8a753108ebeabbbf3b837704"
+        },
+        {
+          "file": "recovered-31-1280.webp",
+          "bytes": 150408,
+          "width": 1279,
+          "height": 714,
+          "sha256": "6e9f263ce93b50e50367f14fe22c7b6b30ac3b270cb5b086d55ddcf3e315f5cb"
+        }
+      ]
+    },
+    {
+      "recipe": "Mami",
+      "itemId": "pizzas/Mami|1300",
+      "source": "photo-32.jpg",
+      "sourceSha256": "86bca6170591b915366b2712f7e089a6bcc10046ae83c7edfe13d0d87fbaba5d",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-32-640.webp",
+          "bytes": 54520,
+          "width": 640,
+          "height": 357,
+          "sha256": "5371a6a16787e697446cacaf374746656e157b13ca8b6288f1b2ee8f619f0bce"
+        },
+        {
+          "file": "recovered-32-1280.webp",
+          "bytes": 155032,
+          "width": 1279,
+          "height": 714,
+          "sha256": "97c0bfc1f573dcb326ac53e7d3bf836c6144f632f00f569823f3425ab607b1ea"
+        }
+      ]
+    },
+    {
+      "recipe": "Spéciale",
+      "itemId": "pizzas/Spéciale|1300",
+      "source": "photo-33.jpg",
+      "sourceSha256": "44572eccc44ae81f1339372ed31e9126b3e24afe4730596818d5c3de93f80681",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-33-640.webp",
+          "bytes": 48628,
+          "width": 640,
+          "height": 357,
+          "sha256": "cd7daadaee5514e622eb23482a1f2a23d466c62b63e9e966fb128f30bd6ec9be"
+        },
+        {
+          "file": "recovered-33-1280.webp",
+          "bytes": 145978,
+          "width": 1279,
+          "height": 714,
+          "sha256": "c379181252ba358ce4573da8ffb58d6d257ac1264f81b9be577c714ee3a69bf7"
+        }
+      ]
+    },
+    {
+      "recipe": "Ritta",
+      "itemId": "pizzas/Ritta|1300",
+      "source": "photo-34.jpg",
+      "sourceSha256": "209bdb08cd60b85908c4eaaf432b4ea502263d5b448af5a6dd4d3a0ee1cb9183",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-34-640.webp",
+          "bytes": 51174,
+          "width": 640,
+          "height": 357,
+          "sha256": "cda79016b997cf3f9592f9e3026edd711d79238361a169a7d87af9a9403fd0c5"
+        },
+        {
+          "file": "recovered-34-1280.webp",
+          "bytes": 152628,
+          "width": 1279,
+          "height": 714,
+          "sha256": "17e08871e3a0ab2578f56f230fe987733fb79ac7c6520193cf3a13ab19d56d5d"
+        }
+      ]
+    },
+    {
+      "recipe": "Savoyarde",
+      "itemId": "pizzas/Savoyarde|1400",
+      "source": "photo-35.jpg",
+      "sourceSha256": "00af663148eb4137f1bb4244262f63a970df3d0f051c26a17320aed7be199276",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-35-640.webp",
+          "bytes": 44738,
+          "width": 640,
+          "height": 357,
+          "sha256": "3a2d01c3af49bd0234d0372cfeb33607b7723ead56033e9ab0c9101342f77adf"
+        },
+        {
+          "file": "recovered-35-1280.webp",
+          "bytes": 135658,
+          "width": 1279,
+          "height": 714,
+          "sha256": "bb343f1730d3e6418f9e6c0fed46e5276f1db0f18574d19a44699f15806879f7"
+        }
+      ]
+    },
+    {
+      "recipe": "Barbecue",
+      "itemId": "pizzas/Barbecue|1400",
+      "source": "photo-36.jpg",
+      "sourceSha256": "f9e296a879c0104b90907d50ad5636301196434108e918ff294d536dc2650bb6",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-36-640.webp",
+          "bytes": 53760,
+          "width": 640,
+          "height": 357,
+          "sha256": "cf725af46de89dee4185b5f61b9f5735506a24ef8c4bf5e24898c61bc00108db"
+        },
+        {
+          "file": "recovered-36-1280.webp",
+          "bytes": 161020,
+          "width": 1279,
+          "height": 714,
+          "sha256": "098f81acad6550e0650eea93bdbf90608f95840d41ad2953fa32081a56ce10ce"
+        }
+      ]
+    },
+    {
+      "recipe": "6 Fromages",
+      "itemId": "pizzas/6 Fromages|1400",
+      "source": "photo-37.jpg",
+      "sourceSha256": "b02303f1e7dd2539ac2d6fd838a145349a7450db463a8aa20119bf88ef91733e",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-37-640.webp",
+          "bytes": 55564,
+          "width": 640,
+          "height": 357,
+          "sha256": "5b21ad632700792a6dc8ea6ea0f5db64075e8db97bfbe452d848b7aaa68c5611"
+        },
+        {
+          "file": "recovered-37-1280.webp",
+          "bytes": 160678,
+          "width": 1279,
+          "height": 714,
+          "sha256": "7ad9bf64ab1c5ce9fa72b5c2cdc7902171e6150fd725ba39558782eecbddbf36"
+        }
+      ]
+    },
+    {
+      "recipe": "Pita",
+      "itemId": "pizzas/Pita|1400",
+      "source": "photo-38.jpg",
+      "sourceSha256": "79e68f38e82be344b5fae4215209e86d02433c7e38c45ca698cae3ff48923324",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-38-640.webp",
+          "bytes": 51734,
+          "width": 640,
+          "height": 357,
+          "sha256": "a58c269a16f15b2b3d5277be9a4c610309c3127168d84c0ca90f0c7a2c5edc45"
+        },
+        {
+          "file": "recovered-38-1280.webp",
+          "bytes": 150142,
+          "width": 1279,
+          "height": 714,
+          "sha256": "816939100fac1e1eb4af81b7a1fc987fc7fb29e238cfdeb3fd3a2ba1b1571e93"
+        }
+      ]
+    },
+    {
+      "recipe": "Océane",
+      "itemId": "pizzas/Océane|1400",
+      "source": "photo-39.jpg",
+      "sourceSha256": "7f8ef1a4bb8b651582cb841f0621d9df317e781bb9cec2ea4278167cbbbc3faf",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-39-640.webp",
+          "bytes": 70680,
+          "width": 640,
+          "height": 357,
+          "sha256": "a271cf39b36c2923ea04192ae46976afda4e6f02d8018f0e0b43c093f7e139d1"
+        },
+        {
+          "file": "recovered-39-1280.webp",
+          "bytes": 198130,
+          "width": 1279,
+          "height": 714,
+          "sha256": "4fcab8a9bf1fccc0a53aa7b83d123747a7114e71d912cc844661fb1ba5e78df6"
+        }
+      ]
+    },
+    {
+      "recipe": "Royale",
+      "itemId": "pizzas/Royale|1400",
+      "source": "photo-40.jpg",
+      "sourceSha256": "7c91b055f83dc2b7c636d894e4f71cd7302d94e93e26ea1c17b53791ce84e3e1",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-40-640.webp",
+          "bytes": 68338,
+          "width": 640,
+          "height": 357,
+          "sha256": "6453ffd68cd1a81761a5ad7495e4cf819863cbecba5980044ac7f552150c677d"
+        },
+        {
+          "file": "recovered-40-1280.webp",
+          "bytes": 189210,
+          "width": 1279,
+          "height": 714,
+          "sha256": "f70e6384a50ed73880ad5038caa5d26539b3baffb38f9c195bbaf10199b7adcd"
+        }
+      ]
+    },
+    {
+      "recipe": "Parme",
+      "itemId": "pizzas/Parme|1400",
+      "source": "photo-41.jpg",
+      "sourceSha256": "204b2fcc9014da4e4751d7566fd63efec046be1f0e2ad4a1085e8e785381babc",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-41-640.webp",
+          "bytes": 62702,
+          "width": 640,
+          "height": 357,
+          "sha256": "f75bf6f2dd19baa7b5cac9941363745b829d183551e08f8593964175919f0e92"
+        },
+        {
+          "file": "recovered-41-1280.webp",
+          "bytes": 172254,
+          "width": 1279,
+          "height": 714,
+          "sha256": "2e3520f7999156657c7d831a15062e91f83402580937e1a65f8133d457e7fa4e"
+        }
+      ]
+    },
+    {
+      "recipe": "Roi Soleil",
+      "itemId": "pizzas/Roi Soleil|1500",
+      "source": "photo-42.jpg",
+      "sourceSha256": "238351d05b3cabfe2d9a2e4f3bc8472904479879e0b9742ece8eb6fc2893116e",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-42-640.webp",
+          "bytes": 65192,
+          "width": 640,
+          "height": 357,
+          "sha256": "bab098acd2c1e2f52824c5fbc972b99369b7d8cdaab2d34da0356a073fc8d1da"
+        },
+        {
+          "file": "recovered-42-1280.webp",
+          "bytes": 176126,
+          "width": 1279,
+          "height": 714,
+          "sha256": "95194d2b03c5462bf87bfc1fc17eee323e1f3768789cd78d291e588dce56a377"
+        }
+      ]
+    },
+    {
+      "recipe": "Felece",
+      "itemId": "pizzas/Felece|1500",
+      "source": "photo-43.jpg",
+      "sourceSha256": "41600dce829445da96cbcf57e4a8adff1fe74ecbf4677de70d2a896b4f4551e2",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-43-640.webp",
+          "bytes": 59836,
+          "width": 640,
+          "height": 357,
+          "sha256": "294d2d31138de14344120be58d1c30611bce8eefa6abcdd2fba8df299166730d"
+        },
+        {
+          "file": "recovered-43-1280.webp",
+          "bytes": 168784,
+          "width": 1279,
+          "height": 714,
+          "sha256": "451d43e2a641e08f7d0aab4a714c7e756a4b4dc9deb31f9d03bd5677c400b70c"
+        }
+      ]
+    },
+    {
+      "recipe": "Cannibale",
+      "itemId": "pizzas/Cannibale|1600",
+      "source": "photo-44.jpg",
+      "sourceSha256": "b6d65a3cc17b53f310347e41b9d8a0e0bc8a540b957b550df2c9063007888f2a",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-44-640.webp",
+          "bytes": 66422,
+          "width": 640,
+          "height": 357,
+          "sha256": "d2bd12d8f855ed70106957872b2739254740cef8f713da861cddc1485edaa442"
+        },
+        {
+          "file": "recovered-44-1280.webp",
+          "bytes": 193152,
+          "width": 1279,
+          "height": 714,
+          "sha256": "fafd45a01c73a9404e479bafa7e2247a45b82ef44bee2e42c54433c1b12859b1"
+        }
+      ]
+    },
+    {
+      "recipe": "Burrata",
+      "itemId": "pizzas/Burrata|1700",
+      "source": "photo-45.jpg",
+      "sourceSha256": "a533e5f565326b14b9ec75425185e55092648fe24691f3b5bcface8bf744c58a",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-45-640.webp",
+          "bytes": 62626,
+          "width": 640,
+          "height": 357,
+          "sha256": "50819e1c5d0d4c07152fe0de928958688d9f692b985060f06e4b5217c9560ef6"
+        },
+        {
+          "file": "recovered-45-1280.webp",
+          "bytes": 172754,
+          "width": 1279,
+          "height": 714,
+          "sha256": "1d7aa05da50835cc910bff0312e7ef448d7e1925635179713d33a7ca1020076b"
+        }
+      ]
+    },
+    {
+      "recipe": "Rim",
+      "itemId": "pizzas/Rim|1400",
+      "source": "photo-46.jpg",
+      "sourceSha256": "6b50d83cd8a62784187a712f79ed13df5c27ef84fe8acb8cdc4204672d253823",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-46-640.webp",
+          "bytes": 58522,
+          "width": 640,
+          "height": 357,
+          "sha256": "a2a9187685bfeb0cfc33ef74877a88ff30634ff62c9aa55424310ef31c73fd65"
+        },
+        {
+          "file": "recovered-46-1280.webp",
+          "bytes": 160658,
+          "width": 1279,
+          "height": 714,
+          "sha256": "00462f98cb516edb99afca0bd80b77cb8b238d7a7b082e911b539d57d09f1c4f"
+        }
+      ]
+    },
+    {
+      "recipe": "Choupette",
+      "itemId": "pizzas/Choupette|1300",
+      "source": "photo-47.jpg",
+      "sourceSha256": "e93da4ebe29af2ed535c3d9bcc9c9423207f2b36f972e122a19698f25b364c6e",
+      "basis": "User site-menu sequence + visual topping review; merchant confirmation pending",
+      "exports": [
+        {
+          "file": "recovered-47-640.webp",
+          "bytes": 61146,
+          "width": 640,
+          "height": 357,
+          "sha256": "ac9f409e87cd442685526c14769fe3f7902e06aa6f588ff85617b62bc737ecf2"
+        },
+        {
+          "file": "recovered-47-1280.webp",
+          "bytes": 164714,
+          "width": 1279,
+          "height": 714,
+          "sha256": "a0aa34501d9e9dccb218ce41eb82fcd7424c2c174ce21b7602050dd553b0f9c8"
+        }
+      ]
+    }
+  ]
+}

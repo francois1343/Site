@@ -110,7 +110,10 @@
       "name": "Piemontaise",
       "category": "pizzas",
       "price": 1000,
-      "ingredients": "Tomate, mozzarella, jambon, oignon"
+      "ingredients": "Tomate, mozzarella, jambon, oignon",
+      "image": "recovered-02",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Veniziana|1000",
@@ -118,7 +121,10 @@
       "name": "Veniziana",
       "category": "pizzas",
       "price": 1000,
-      "ingredients": "Tomate, mozzarella, champignon"
+      "ingredients": "Tomate, mozzarella, champignon",
+      "image": "recovered-03",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Napolitaine|1000",
@@ -126,7 +132,10 @@
       "name": "Napolitaine",
       "category": "pizzas",
       "price": 1000,
-      "ingredients": "Tomate, mozzarella, olives, câpres, anchois"
+      "ingredients": "Tomate, mozzarella, olives, câpres, anchois",
+      "image": "recovered-05",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Diavolo|1100",
@@ -134,7 +143,10 @@
       "name": "Diavolo",
       "category": "pizzas",
       "price": 1100,
-      "ingredients": "Tomate, mozzarella, jambon, anchois"
+      "ingredients": "Tomate, mozzarella, jambon, anchois",
+      "image": "recovered-06",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Salami|1000",
@@ -142,7 +154,10 @@
       "name": "Salami",
       "category": "pizzas",
       "price": 1000,
-      "ingredients": "Tomate, mozzarella, salami piquant"
+      "ingredients": "Tomate, mozzarella, salami piquant",
+      "image": "recovered-04",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Thon|1100",
@@ -150,7 +165,10 @@
       "name": "Thon",
       "category": "pizzas",
       "price": 1100,
-      "ingredients": "Tomate, mozzarella, thon, oignons"
+      "ingredients": "Tomate, mozzarella, thon, oignons",
+      "image": "recovered-07",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/4 Saisons|1100",
@@ -158,7 +176,10 @@
       "name": "4 Saisons",
       "category": "pizzas",
       "price": 1100,
-      "ingredients": "Tomate, mozzarella, jambon, artichauts, champignons, olives"
+      "ingredients": "Tomate, mozzarella, jambon, artichauts, champignons, olives",
+      "image": "recovered-08",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Sicilienne|1100",
@@ -166,7 +187,10 @@
       "name": "Sicilienne",
       "category": "pizzas",
       "price": 1100,
-      "ingredients": "Tomate, mozzarella, poivrons, olives, câpres, anchois"
+      "ingredients": "Tomate, mozzarella, poivrons, olives, câpres, anchois",
+      "image": "recovered-09",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Végétarienne|1100",
@@ -174,7 +198,10 @@
       "name": "Végétarienne",
       "category": "pizzas",
       "price": 1100,
-      "ingredients": "Tomate, mozzarella, artichauts, olives, champignons, poivrons"
+      "ingredients": "Tomate, mozzarella, artichauts, olives, champignons, poivrons",
+      "image": "recovered-10",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Hawai|1100",
@@ -191,7 +218,10 @@
       "name": "Lardière",
       "category": "pizzas",
       "price": 1100,
-      "ingredients": "Tomate, mozzarella, lardons, oignons"
+      "ingredients": "Tomate, mozzarella, lardons, oignons",
+      "image": "recovered-11",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/4 Fromages|1100",
@@ -208,7 +238,10 @@
       "name": "Merguez",
       "category": "pizzas",
       "price": 1100,
-      "ingredients": "Tomate, mozzarella, merguez, oignons"
+      "ingredients": "Tomate, mozzarella, merguez, oignons",
+      "image": "recovered-12",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Parmigiann|1100",
@@ -216,7 +249,10 @@
       "name": "Parmigiann",
       "category": "pizzas",
       "price": 1100,
-      "ingredients": "Tomate, mozzarella, aubergines, parmesan"
+      "ingredients": "Tomate, mozzarella, aubergines, parmesan",
+      "image": "recovered-13",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Capresse|1100",
@@ -224,7 +260,10 @@
       "name": "Capresse",
       "category": "pizzas",
       "price": 1100,
-      "ingredients": "Tomate fraîche, mozzarella, olives, roquette, huile d'olive"
+      "ingredients": "Tomate fraîche, mozzarella, olives, roquette, huile d'olive",
+      "image": "recovered-14",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Calzone|1100",
@@ -232,7 +271,10 @@
       "name": "Calzone",
       "category": "pizzas",
       "price": 1100,
-      "ingredients": "Tomate, mozzarella, jambon, salami, champignon"
+      "ingredients": "Tomate, mozzarella, jambon, salami, champignon",
+      "image": "recovered-15",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Bolognaise|1300",
@@ -240,7 +282,10 @@
       "name": "Bolognaise",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Tomate, mozzarella, bolognaise, parmesan, jambon"
+      "ingredients": "Tomate, mozzarella, bolognaise, parmesan, jambon",
+      "image": "recovered-16",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Chop|1200",
@@ -248,7 +293,10 @@
       "name": "Chop",
       "category": "pizzas",
       "price": 1200,
-      "ingredients": "Tomate, mozzarella, tomates fraîches, haché de bœuf, poivron, sauce barbecue"
+      "ingredients": "Tomate, mozzarella, tomates fraîches, haché de bœuf, poivron, sauce barbecue",
+      "image": "recovered-17",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Marinara|1300",
@@ -256,7 +304,10 @@
       "name": "Marinara",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Tomate, mozzarella, fruit de mer, huile à l'ail"
+      "ingredients": "Tomate, mozzarella, fruit de mer, huile à l'ail",
+      "image": "recovered-18",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Chèvre|1300",
@@ -264,7 +315,10 @@
       "name": "Chèvre",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Tomate, mozzarella, chèvre, lardon"
+      "ingredients": "Tomate, mozzarella, chèvre, lardon",
+      "image": "recovered-19",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Carpaccio|1300",
@@ -272,7 +326,10 @@
       "name": "Carpaccio",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Tomate, mozzarella, carpaccio, parmesan, roquette, ail"
+      "ingredients": "Tomate, mozzarella, carpaccio, parmesan, roquette, ail",
+      "image": "recovered-20",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Scampi|1300",
@@ -280,7 +337,10 @@
       "name": "Scampi",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Tomate, mozzarella, scampi, tomate fraîche, huile à l'ail"
+      "ingredients": "Tomate, mozzarella, scampi, tomate fraîche, huile à l'ail",
+      "image": "recovered-21",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Saumon|1300",
@@ -288,7 +348,10 @@
       "name": "Saumon",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Tomate, mozzarella, saumon, oignons"
+      "ingredients": "Tomate, mozzarella, saumon, oignons",
+      "image": "recovered-22",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Chef|1400",
@@ -296,7 +359,10 @@
       "name": "Chef",
       "category": "pizzas",
       "price": 1400,
-      "ingredients": "Tomate, mozzarella, merguez, bœuf haché, salami"
+      "ingredients": "Tomate, mozzarella, merguez, bœuf haché, salami",
+      "image": "recovered-23",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Feta|1300",
@@ -304,7 +370,10 @@
       "name": "Feta",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Tomate, mozzarella, bœuf haché, feta, poivron"
+      "ingredients": "Tomate, mozzarella, bœuf haché, feta, poivron",
+      "image": "recovered-24",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/5 Fromages|1300",
@@ -312,7 +381,10 @@
       "name": "5 Fromages",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Tomate, mozzarella, taleggio, gorgonzola, chèvre"
+      "ingredients": "Tomate, mozzarella, taleggio, gorgonzola, chèvre",
+      "image": "recovered-25",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Recola|1300",
@@ -320,7 +392,10 @@
       "name": "Recola",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Tomate, mozzarella, tomate fraîche, aubergine, roquette, ail, parmesan"
+      "ingredients": "Tomate, mozzarella, tomate fraîche, aubergine, roquette, ail, parmesan",
+      "image": "recovered-26",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Mexicaine|1300",
@@ -328,7 +403,10 @@
       "name": "Mexicaine",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Tomate, mozzarella, salami, merguez, poivrons"
+      "ingredients": "Tomate, mozzarella, salami, merguez, poivrons",
+      "image": "recovered-27",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Calabrese|1300",
@@ -336,7 +414,10 @@
       "name": "Calabrese",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Tomate, mozzarella, jambon, aubergines, parmesan"
+      "ingredients": "Tomate, mozzarella, jambon, aubergines, parmesan",
+      "image": "recovered-28",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Burger|1300",
@@ -344,7 +425,10 @@
       "name": "Burger",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Tomate, mozzarella, hamburger, oignons, poivrons, sauce barbecue"
+      "ingredients": "Tomate, mozzarella, hamburger, oignons, poivrons, sauce barbecue",
+      "image": "recovered-29",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Maison|1300",
@@ -352,7 +436,10 @@
       "name": "Maison",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Tomate, mozzarella, aubergine, scampis"
+      "ingredients": "Tomate, mozzarella, aubergine, scampis",
+      "image": "recovered-30",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Gyros|1300",
@@ -360,7 +447,10 @@
       "name": "Gyros",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Tomate, mozzarella, poulet mariné"
+      "ingredients": "Tomate, mozzarella, poulet mariné",
+      "image": "recovered-31",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Mami|1300",
@@ -368,7 +458,10 @@
       "name": "Mami",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Tomate, mozzarella, aubergine, salami, œuf, parmesan"
+      "ingredients": "Tomate, mozzarella, aubergine, salami, œuf, parmesan",
+      "image": "recovered-32",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Spéciale|1300",
@@ -376,7 +469,10 @@
       "name": "Spéciale",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Crème, mozzarella, feta, poulet, lardons"
+      "ingredients": "Crème, mozzarella, feta, poulet, lardons",
+      "image": "recovered-33",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Ritta|1300",
@@ -384,7 +480,10 @@
       "name": "Ritta",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Crème, mozzarella, tomate fraîche, aubergines, parmesan"
+      "ingredients": "Crème, mozzarella, tomate fraîche, aubergines, parmesan",
+      "image": "recovered-34",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Savoyarde|1400",
@@ -392,7 +491,10 @@
       "name": "Savoyarde",
       "category": "pizzas",
       "price": 1400,
-      "ingredients": "Base crème, lardon, pomme de terre, fromage raclette"
+      "ingredients": "Base crème, lardon, pomme de terre, fromage raclette",
+      "image": "recovered-35",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Barbecue|1400",
@@ -400,7 +502,10 @@
       "name": "Barbecue",
       "category": "pizzas",
       "price": 1400,
-      "ingredients": "Tomate, mozzarella, viande hachée, merguez, sauce barbecue"
+      "ingredients": "Tomate, mozzarella, viande hachée, merguez, sauce barbecue",
+      "image": "recovered-36",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/6 Fromages|1400",
@@ -408,7 +513,10 @@
       "name": "6 Fromages",
       "category": "pizzas",
       "price": 1400,
-      "ingredients": "Tomate, mozzarella, gorgonzola, taleggio, parmesan, chèvre, raclette"
+      "ingredients": "Tomate, mozzarella, gorgonzola, taleggio, parmesan, chèvre, raclette",
+      "image": "recovered-37",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Pita|1400",
@@ -416,7 +524,10 @@
       "name": "Pita",
       "category": "pizzas",
       "price": 1400,
-      "ingredients": "Crème, mozzarella, oignons, viande pita, sauce pita, feta"
+      "ingredients": "Crème, mozzarella, oignons, viande pita, sauce pita, feta",
+      "image": "recovered-38",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Océane|1400",
@@ -424,7 +535,10 @@
       "name": "Océane",
       "category": "pizzas",
       "price": 1400,
-      "ingredients": "Tomate, mozzarella, scampi, fruit de mer, anchois, ail"
+      "ingredients": "Tomate, mozzarella, scampi, fruit de mer, anchois, ail",
+      "image": "recovered-39",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Raclette|1400",
@@ -440,7 +554,10 @@
       "name": "Royale",
       "category": "pizzas",
       "price": 1400,
-      "ingredients": "Tomate, mozzarella, merguez, bœuf haché, salami, jambon"
+      "ingredients": "Tomate, mozzarella, merguez, bœuf haché, salami, jambon",
+      "image": "recovered-40",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Parme|1400",
@@ -448,7 +565,10 @@
       "name": "Parme",
       "category": "pizzas",
       "price": 1400,
-      "ingredients": "Tomate, mozzarella, champignons, jambon de parme, roquette, parmesan, huile à l'ail"
+      "ingredients": "Tomate, mozzarella, champignons, jambon de parme, roquette, parmesan, huile à l'ail",
+      "image": "recovered-41",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Roi Soleil|1500",
@@ -456,7 +576,10 @@
       "name": "Roi Soleil",
       "category": "pizzas",
       "price": 1500,
-      "ingredients": "Tomate, mozzarella, saumon, tomate fraîche, chèvre, parmesan, huile à l'ail"
+      "ingredients": "Tomate, mozzarella, saumon, tomate fraîche, chèvre, parmesan, huile à l'ail",
+      "image": "recovered-42",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Felece|1500",
@@ -464,7 +587,10 @@
       "name": "Felece",
       "category": "pizzas",
       "price": 1500,
-      "ingredients": "Base crème, scampi, saumon, tomate fraîche, gorgonzola"
+      "ingredients": "Base crème, scampi, saumon, tomate fraîche, gorgonzola",
+      "image": "recovered-43",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Cannibale|1600",
@@ -472,7 +598,10 @@
       "name": "Cannibale",
       "category": "pizzas",
       "price": 1600,
-      "ingredients": "Tomate, mozzarella, jambon, salami, lardons, merguez, haché de bœuf"
+      "ingredients": "Tomate, mozzarella, jambon, salami, lardons, merguez, haché de bœuf",
+      "image": "recovered-44",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Burrata|1700",
@@ -480,7 +609,10 @@
       "name": "Burrata",
       "category": "pizzas",
       "price": 1700,
-      "ingredients": "Tomate, mozzarella, tomate fraîche, parme, viande de haché, burrata, roquette, parmesan, ail"
+      "ingredients": "Tomate, mozzarella, tomate fraîche, parme, viande de haché, burrata, roquette, parmesan, ail",
+      "image": "recovered-45",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Jadot|2000",
@@ -497,7 +629,10 @@
       "name": "Rim",
       "category": "pizzas",
       "price": 1400,
-      "ingredients": "Tomate, mozzarella, salami, parme, merguez, gorgonzola"
+      "ingredients": "Tomate, mozzarella, salami, parme, merguez, gorgonzola",
+      "image": "recovered-46",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "pizzas/Choupette|1300",
@@ -505,7 +640,10 @@
       "name": "Choupette",
       "category": "pizzas",
       "price": 1300,
-      "ingredients": "Mozzarella, tomate fraîche, thon, roquette, crème balsamique"
+      "ingredients": "Mozzarella, tomate fraîche, thon, roquette, crème balsamique",
+      "image": "recovered-47",
+      "imageWidth": 1376,
+      "imageHeight": 768
     },
     {
       "id": "viandes/Escalope Milanaise|1500",
